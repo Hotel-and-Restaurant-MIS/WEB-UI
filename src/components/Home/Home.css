@@ -1,0 +1,25 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; 
+}
+
+.home-1 {
+  height: 100vh;
+  background: url('../../images/home.png') no-repeat center center/cover;
+  background-color: rgba(20, 39, 74, 0.5);
+  background-blend-mode: overlay;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  position: relative;
+  margin-top: 0;
+  z-index: 1;
+}
+
