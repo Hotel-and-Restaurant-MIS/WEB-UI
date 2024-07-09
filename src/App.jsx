@@ -16,12 +16,31 @@ function App() {
         <Router>
             <div>
                 <header className="header">
-                    <div className="logo">LUXURY HOTELS</div>
+                    <div className="logo">
+                        <h1>L U X U R Y</h1>
+                        <h2>HOTELS</h2>
+                    </div>
                     <nav>
-                        <NavLink end to="/home" className={({ isActive }) => (isActive ? 'active' : '')}>Home</NavLink>
-                        <NavLink to="/facilities" className={({ isActive }) => (isActive ? 'active' : '')}>Facilities</NavLink>
-                        <NavLink to="/rooms" className={({ isActive }) => (isActive ? 'active' : '')}>Rooms</NavLink>
-                        <NavLink to="/contactus" className={({ isActive }) => (isActive ? 'active' : '')}>Contact Us</NavLink>
+                        <div>
+                            <NavLink end to="/home" className={({ isActive }) => (isActive ? 'active' : '')}>
+                                Home
+                            </NavLink>
+                        </div>
+                        <div>
+                            <NavLink to="/facilities" className={({ isActive }) => (isActive ? 'active' : '')}>
+                                Facilities
+                            </NavLink>
+                        </div>
+                        <div>
+                            <NavLink to="/rooms" className={({ isActive }) => (isActive ? 'active' : '')}>
+                                Rooms
+                            </NavLink>
+                        </div>
+                        <div>
+                            <NavLink to="/contactus" className={({ isActive }) => (isActive ? 'active' : '')}>
+                                Contact Us
+                            </NavLink>
+                        </div>
                     </nav>
                 </header>
                 <Routes>

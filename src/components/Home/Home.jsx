@@ -5,11 +5,15 @@ function Home() {
   return (
     <div>
       <section className="home-1" id="home">
-        <h1>Welcome to Luxury Hotels</h1>
-        <p>
-          Book your stay and enjoy luxury redefined at the most affordable
-          rates.
-        </p>
+        <dev className="home-main-cont">
+          <h1>WELCOME TO </h1>
+          <h2>LUXURY </h2>
+          <h3>HOTELS</h3>
+          <p>
+            Book your stay and enjoy luxury redefined at the most affordable
+            rates.
+          </p>
+        </dev>
         <button className="book-now">Book Now</button>
         <div className="scroll-indicator">↓ Scroll</div>
       </section>

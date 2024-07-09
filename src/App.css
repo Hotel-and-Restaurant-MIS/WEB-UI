@@ -3,8 +3,8 @@ body, html {
   padding: 0;
   height: 100%;
   width: 100%;
-  overflow: hidden; 
-}
+
+  font-family: Arial, sans-serif;}
 
 .header {
   width: 100%;
@@ -12,23 +12,58 @@ body, html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 50px;
+  padding-top: 0;
   position: fixed;
   top: 0;
   z-index: 10;
 }
 
-.header a {
-  color: white;
-  font-style: bold;
-  text-decoration: none;
-  margin: 3rem;
+.header nav {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  margin-left: 200px;
 }
 
-.header a:last-child {
-  margin-right: 10rem; 
+.header nav div {
+  margin: 2rem;
+}
+
+
+.header a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0 1rem;
 }
 
 .header a.active {
   text-decoration: underline;
+  font-weight: bold;
 }
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #E0B973;
+  padding: 1.5rem 1.5rem;
+  border-radius: 0 0 30px 30px;
+  margin-left: 15rem;
+}
+
+.logo h1 {
+  color: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.5rem;
+  margin: 0; 
+}
+
+.logo h2 {
+  color: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1rem;
+  margin: 0;
+}
+
+
