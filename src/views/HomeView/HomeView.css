@@ -1,0 +1,13 @@
+.home-main-cont {
+  width: 100%;
+}
+
+.home-hero-section {
+  height: 100vh;
+  background: url('../../images/home-hero.png') no-repeat center center/cover;
+  background-color: rgba(16, 33, 65, 0.7);
+  opacity: 95%;
+  background-blend-mode: overlay;
+  color: white;
+  text-align: center;
+}
