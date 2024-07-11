@@ -1,0 +1,83 @@
+.contact-main-cont {
+  background-color: black;
+}
+
+.contact-name {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-size: 35px;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 60px;
+}
+
+.contact-content-description {
+  padding-top: 80px;
+  padding-left: 25%;
+  padding-right: 25%;
+  padding-bottom: 50px;
+  background-color: #F7F7F7;
+}
+
+.contact-content-description p {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.contact-content {
+  padding-right: 25%;
+  background-color: #F7F7F7;
+  padding-top: 50px;
+  padding-left: 25%;
+  display: flex;
+  padding-bottom: 30px;
+}
+
+.contact-content-details {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contact-content-fillbox {
+  padding-left: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-content-fillbox label {
+  font-size: 15px;
+  font-weight: 550;
+}
+
+.contact-content-fillbox input {
+  border: 1px solid black;
+  padding: 10px;
+  width: 17rem;
+  margin-bottom: 20px;
+}
+
+.contact-content-fillbox textarea {
+  border: 1px solid black;
+  padding: 10px;
+  width: 17rem;
+  margin-bottom: 20px;
+}
+
+.details-button-container {
+  display: flex;
+  justify-content: right;
+}
+
+.details-submit-button {
+  color: black;
+  border: none;
+  background-color: #E0B973;
+  padding: 10px 20px;
+  font-size: 12pt;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}

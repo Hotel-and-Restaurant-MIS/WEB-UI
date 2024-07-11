@@ -1,0 +1,17 @@
+.review-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+.review-button {
+  color: black;
+  border: none;
+  background-color: #E0B973;
+  padding: 10px 25px;
+  font-size: 12pt;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}

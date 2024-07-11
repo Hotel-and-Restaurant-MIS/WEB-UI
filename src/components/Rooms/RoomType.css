@@ -1,0 +1,48 @@
+.room-type-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 40px;
+}
+
+.room-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+  margin: 0%
+}
+
+.room-background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* 'cover' usually works better than 'contained' for background images */
+}
+
+
+.room-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #1E1E1E;
+  padding-bottom: 20px;
+}
+
+.room-cont h1 {
+  font-size: 2rem;
+  color: white;
+  padding-bottom: 12px;
+}
+
+.room-price-container {
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #E0B973;
+  width: 15rem;
+  padding: 10px;
+  border-radius: 10px;
+
+}

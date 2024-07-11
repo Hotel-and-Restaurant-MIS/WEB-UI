@@ -11,3 +11,57 @@
   color: white;
   text-align: center;
 }
+
+.home-h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  font-size: 24px;
+}
+
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 15%;
+}
+
+.home-container-cont {
+  flex: 1;
+  text-align: left;
+  border-left: 2px solid black;
+  padding-left: 3%;
+}
+
+.home-container-cont h1 {
+  font-weight: bold;
+  font-size: 40px;
+  margin-top: 0%;
+}
+
+.home-container-cont h2 {
+  font-weight: bold;
+  font-size: 32px;
+  margin: 0;
+}
+
+.home-container-cont p {
+  font-size: 20px;
+  margin: 1%;
+}
+
+.home-container-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10%;
+}
+
+.home-container-img img {
+  width: 30rem;
+  height: 20rem;
+  object-fit: cover;
+}

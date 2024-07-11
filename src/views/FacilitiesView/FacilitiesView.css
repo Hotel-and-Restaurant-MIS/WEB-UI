@@ -11,3 +11,19 @@
   color: white;
   text-align: center;
 }
+
+.facilities-cont {
+  padding-top: 40px;
+  text-align: center;
+}
+
+.facilities-cont h1 {
+  font-size: 30px;
+  font-weight: bolder;
+  padding-bottom: 20px;
+}
+
+.facilities-cont p {
+  font-weight: 550;
+
+}

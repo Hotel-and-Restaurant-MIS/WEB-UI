@@ -1,0 +1,14 @@
+.massenger-icon {
+  position: fixed;
+  bottom: 30px;
+  right: 40px;
+  z-index: 1000;
+  /* Ensure it stays on top of other elements */
+
+}
+
+.massenger-icon img {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}

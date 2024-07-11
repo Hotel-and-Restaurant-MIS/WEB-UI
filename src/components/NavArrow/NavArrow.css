@@ -1,0 +1,35 @@
+.arrow-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+.left-arrow {
+  background-color: #E0B973;
+  border-radius: 5px;
+  height: 30px;
+  width: 30px;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.right-arrow {
+  background-color: #E0B973;
+  border-radius: 5px;
+  margin-left: 5px;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.left-arrow svg,
+.right-arrow svg {
+  height: 15px;
+}

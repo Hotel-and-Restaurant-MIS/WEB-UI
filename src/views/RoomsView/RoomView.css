@@ -11,3 +11,19 @@
   color: white;
   text-align: center;
 }
+
+.rooms-cont {
+  padding-top: 40px;
+  text-align: center;
+}
+
+.rooms-cont h1 {
+  font-size: 30px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.rooms-cont p {
+  font-weight: 550;
+
+}

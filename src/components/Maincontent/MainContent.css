@@ -1,54 +1,45 @@
-
 .main-navbar {
   padding: 20px;
 }
 
-.main-hero-sub-text{
-  font-size: 32pt;
+.main-hero-sub-text {
+  font-size: 30pt;
   margin: 0 5px 0 5px;
+  font-weight: 400;
 }
 
-.main-hero-main-text{
+.main-hero-main-text {
   font-size: 72pt;
   margin: 0 5px 0 5px;
+  font-weight: bold;
 }
 
-.main-hero-tag-line{
-  font-size: 20pt;
+.main-hero-sub-text2 {
+  font-size: 35pt;
+  margin: 0 5px 0 5px;
+  font-weight: 600;
+}
+
+.main-hero-tag-line {
+  font-size: 15pt;
   margin: 0 5px 0 5px;
 }
 
-.main-hero-text-cont{
+.main-hero-text-cont {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 7% 15% 3% 12%;
+  padding: 7% 15% 4% 12%;
 }
 
-.main-hero-book-now-btn{
-  color: black;
-  border: none;
-  background-color:#E0B973;
-  padding: 10px 25px;
-  font-size: 12pt;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
+.main-hero-scroll-text {
+  padding-top: 3%;
+  font-size: 11pt;
+  font-weight: 700;
 }
 
-.main-hero-book-now-btn img {
-  height: 14px;
-  width: 15px;
-  padding-right: 10px;
-}
-.main-hero-scroll-text{
-  padding-top: 40px;
-  font-size: 12pt;
-  font-weight: 800;
-}
-
-.main-hero-scroll-down-icon{
+.main-hero-scroll-down-icon {
   height: 50px;
   fill: white;
-}
 
+}
