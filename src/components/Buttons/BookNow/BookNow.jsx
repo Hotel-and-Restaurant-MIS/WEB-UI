@@ -1,12 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import "./BookNow.css";
+import { BookNowPU } from "../../Pop-Ups/BookNow/BookNowPU";
 
 export function BookNow() {
 
+  const [isBookNowOpen, setBookNowOpen] = useState(false);
+
+  const handleBookNowOpen = () => {
+    setBookNowOpen(true);
+  }
+
+  const handleBookNowClose = () => {
+    setBookNowOpen(false);
+  }
+
+
   return (
-    <button className="book-now-btn">
-      <img src={require('../../../images/book-now.png')} alt="book-now-img" />
-      BOOK NOW</button>
+    <div>
+      <button className="book-now-btn" onClick={handleBookNowOpen}>
+        <img src={require('../../../images/book-now.png')} alt="book-now-img" />
+        BOOK NOW</button>
+      <BookNowPU isOpen={isBookNowOpen} handleClose={handleBookNowClose} />
+    </div>
+
   )
 
 }
