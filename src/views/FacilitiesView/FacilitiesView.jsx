@@ -12,6 +12,7 @@ import SpaImage from '../../images/LocationImages/spa.png';
 import SwimmingpoolsImage from '../../images/LocationImages/swimmingpool.png';
 import RestaurantImage from '../../images/LocationImages/restaurant.png';
 import LaundryImage from '../../images/LocationImages/laundry.png';
+import { Footer } from '../../components/Footer/Footer.jsx';
 
 function FacilitiesView() {
     return (
@@ -37,6 +38,7 @@ function FacilitiesView() {
                 <AddReview />
             </section>
             <MassengerIcon />
+            <Footer />
         </div>
     );
 }

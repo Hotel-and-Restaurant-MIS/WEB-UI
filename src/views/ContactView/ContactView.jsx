@@ -3,6 +3,7 @@ import './ContactView.css';
 import { Navbar } from '../../components/Navbar/Navbar';
 import { MassengerIcon } from '../../components/Massenger/Massenger';
 import { ContactForm } from '../../components/ContactUs/ContactForm';
+import { Footer } from '../../components/Footer/Footer.jsx';
 
 
 function ContactView() {
@@ -11,8 +12,6 @@ function ContactView() {
         <div>
             <div className="contact-main-cont">
                 <Navbar />
-
-                <MassengerIcon />
             </div>
             <div className='contact-name'>CONTACT US</div>
             <div className='contact-content-description'>
@@ -30,7 +29,9 @@ function ContactView() {
                         Email: luxury_hotels@gmail.com</div>
                 </div>
                 <ContactForm />
+                <MassengerIcon />
             </div>
+            <Footer />
         </div>
     );
 }

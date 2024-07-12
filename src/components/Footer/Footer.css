@@ -1,0 +1,64 @@
+.footer-container {
+  background-color: black;
+  display: flex;
+  color: white;
+  padding-left: 10%;
+  padding-top: 30px;
+  padding-bottom: 35px;
+}
+
+.footer-name {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-name p {
+  margin: 0;
+  font-size: 10px;
+}
+
+.footer-name-topic {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.footer-name-topic h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.footer-name-topic h2 {
+  margin: 0;
+  font-size: 8px;
+  padding-left: 25px;
+  padding-bottom: 10px;
+}
+
+
+.footer-about {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20%;
+  gap: 15px;
+}
+
+.footer-about h1 {
+  font-size: 11px;
+  margin: 0;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20%;
+  gap: 15px;
+  font-size: 10px;
+}
+
+.footer-contact img {
+  height: 10px;
+  width: 10px;
+  padding-right: 15px;
+}

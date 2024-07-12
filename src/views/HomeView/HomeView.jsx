@@ -6,6 +6,7 @@ import { Review } from '../../components/Review/Review.jsx';
 import { Explore } from '../../components/Buttons/Explore/Explore.jsx';
 import { AddReview } from '../../components/Buttons/AddReview/AddReview.jsx';
 import { NavArrow } from '../../components/NavArrow/NavArrow.jsx';
+import { Footer } from '../../components/Footer/Footer.jsx';
 
 
 function HomeView() {
@@ -48,6 +49,7 @@ function HomeView() {
                 <Review />
                 <NavArrow />
                 <AddReview />
+                <Footer />
             </section>
             <MassengerIcon />
         </div>

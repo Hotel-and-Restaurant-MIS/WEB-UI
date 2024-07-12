@@ -62,7 +62,6 @@ export function ReviewPopUp({ isOpen, handleClose }) {
           <div className='review-popup-button-container'>
             <button type="submit" className='review-submit-button'>Add Review</button>
           </div>
-
         </form>
       </div>
     </div>
