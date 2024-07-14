@@ -1,5 +1,6 @@
 import React from 'react';
 import "./Locations.css";
+import "../../Fonts/Fonts.css";
 
 export function Locations(props) {
   return (

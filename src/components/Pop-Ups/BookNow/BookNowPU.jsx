@@ -1,6 +1,6 @@
 import React from 'react';
 import './BookNowPU.css';
-
+import "../../../Fonts/Fonts.css";
 export function BookNowPU({ isOpen, handleClose }) {
   const handleOverlayClick = (e) => {
     if (e.target === e.currentTarget) {

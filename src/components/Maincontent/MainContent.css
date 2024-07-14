@@ -3,25 +3,31 @@
 }
 
 .main-hero-sub-text {
+  font-family: 'Montserrat';
   font-size: 30pt;
   margin: 0 5px 0 5px;
   font-weight: 400;
 }
 
 .main-hero-main-text {
+  font-family: 'AGaramondPro';
   font-size: 72pt;
   margin: 0 5px 0 5px;
-  font-weight: bold;
+  font-weight: 700;
+  letter-spacing: 0.075em;
+  /* Adjust the value as needed */
 }
 
 .main-hero-sub-text2 {
-  font-size: 35pt;
+  font-family: 'AGaramondPro';
+  font-size: 30pt;
   margin: 0 5px 0 5px;
   font-weight: 600;
 }
 
 .main-hero-tag-line {
-  font-size: 15pt;
+  font-family: 'Montserrat';
+  font-size: 14pt;
   margin: 0 5px 0 5px;
 }
 
@@ -29,13 +35,15 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 7% 15% 4% 12%;
+  padding: 6% 15% 4% 12%;
 }
 
 .main-hero-scroll-text {
+  font-family: 'Montserrat';
   padding-top: 3%;
   font-size: 11pt;
   font-weight: 700;
+  letter-spacing: 1pt;
 }
 
 .main-hero-scroll-down-icon {

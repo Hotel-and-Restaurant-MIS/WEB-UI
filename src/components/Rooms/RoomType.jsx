@@ -1,5 +1,6 @@
 import React from 'react';
 import './RoomType.css';
+import "../../Fonts/Fonts.css";
 
 export function RoomType(props) {
   return (

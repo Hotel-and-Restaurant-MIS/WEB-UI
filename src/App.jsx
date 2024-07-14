@@ -10,6 +10,7 @@ import HomeView from './views/HomeView/HomeView.jsx';
 import FacilitiesView from './views/FacilitiesView/FacilitiesView.jsx';
 import RoomsView from './views/RoomsView/RoomsView.jsx';
 import ContactView from './views/ContactView/ContactView.jsx';
+import "./Fonts/Fonts.css";
 
 function App() {
     return (

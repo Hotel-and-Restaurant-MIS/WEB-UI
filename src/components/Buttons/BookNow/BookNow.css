@@ -1,12 +1,14 @@
 .book-now-btn {
+  font-family: 'Montserrat-bold';
+  font-weight: bold;
   color: black;
   border: none;
   background-color: #E0B973;
   padding: 10px 25px;
   font-size: 12pt;
-  font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
+
 }
 
 .book-now-btn img {

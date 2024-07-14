@@ -6,11 +6,12 @@
 }
 
 .review-button {
+  font-family: 'Montserrat-bold';
   color: black;
   border: none;
   background-color: #E0B973;
   padding: 10px 25px;
-  font-size: 12pt;
+  font-size: 11pt;
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;

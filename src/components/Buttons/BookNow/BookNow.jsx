@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./BookNow.css";
 import { BookNowPU } from "../../Pop-Ups/BookNow/BookNowPU";
+import "../../../Fonts/Fonts.css";
 
 export function BookNow() {
 

@@ -32,12 +32,14 @@
 }
 
 .room-cont h1 {
+  font-family: 'Montserrat-bold';
   font-size: 2rem;
   color: white;
   padding-bottom: 12px;
 }
 
 .room-price-container {
+  font-family: 'Montserrat-bold';
   font-size: 1rem;
   font-weight: bold;
   background-color: #E0B973;

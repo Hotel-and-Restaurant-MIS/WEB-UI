@@ -10,6 +10,7 @@ import SingleBedImage from '../../images/RoomImages/singlebed.png';
 import DoubleBedImage from '../../images/RoomImages/doublebed.png';
 import TwinBedImage from '../../images/RoomImages/twinbed.png';
 import { Footer } from '../../components/Footer/Footer.jsx';
+import "../../Fonts/Fonts.css";
 
 
 function RoomsView() {

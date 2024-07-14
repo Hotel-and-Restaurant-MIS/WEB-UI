@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './ReviewPopUp.css';
+import "../../../Fonts/Fonts.css";
 
 export function ReviewPopUp({ isOpen, handleClose }) {
 

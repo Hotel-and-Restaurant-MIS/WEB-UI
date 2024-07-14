@@ -1,5 +1,6 @@
 import React from 'react';
 import "./Review.css";
+import "../../Fonts/Fonts.css";
 
 export function Review() {
   return (

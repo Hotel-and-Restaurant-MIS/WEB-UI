@@ -36,13 +36,15 @@
 }
 
 .home-container-cont h1 {
-  font-weight: bold;
+  font-family: 'AGaramondPro';
+  font-weight: bolder;
   font-size: 40px;
   margin-top: 0%;
 }
 
 .home-container-cont h2 {
-  font-weight: bold;
+  font-family: 'AGaramondPro';
+  font-weight: bolder;
   font-size: 32px;
   margin: 0;
 }

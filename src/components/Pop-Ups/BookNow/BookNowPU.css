@@ -20,6 +20,7 @@
 }
 
 .booknow-popup-topic {
+  font-family: 'Montserrat-bold';
   background-color: black;
   color: white;
   font-size: 20px;
@@ -41,13 +42,15 @@
 }
 
 .booknow-content-description h1 {
-  font-size: 15px;
+  font-family: 'AGaramondPro';
+  font-size: 20px;
   padding-bottom: 5px;
   margin: 0;
 }
 
 .booknow-content-description p {
-  font-size: 12px;
+  font-weight: 550;
+  font-size: 10px;
   margin: 0;
 }
 
@@ -71,6 +74,7 @@
 }
 
 .form-group label {
+  font-weight: 600;
   flex: 1;
   text-align: left;
   /* Ensures the label text is aligned to the left */
@@ -118,6 +122,7 @@
 }
 
 .booknow-form-button {
+  font-family: 'Montserrat-bold';
   color: black;
   border: none;
   background-color: #E0B973;

@@ -4,6 +4,7 @@
 }
 
 .reviews-container h1 {
+  font-family: 'AGaramondPro';
   font-size: 2em;
   font-weight: bold;
   margin-bottom: 20px;
@@ -11,13 +12,13 @@
 
 .reviews-container p {
   font-size: 1em;
-  font-weight: 550;
+  font-weight: 600;
   margin-bottom: 10px;
 }
 
 .reviews-container h2 {
   font-size: 1em;
-  font-weight: 400;
+  font-weight: 550;
   margin-top: 10px;
 
 }

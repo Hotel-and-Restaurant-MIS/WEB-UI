@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'AGaramondPro';
+  src: url('./Adobe Garamond Pro Regular.ttf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./Montserrat-Regular.ttf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-bold';
+  src: url('./Montserrat-Bold.ttf') format('truetype');
+  font-style: normal;
+}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './AddReview.css';
 import { ReviewPopUp } from '../../Pop-Ups/AddReviewPU/ReviewPopUp';
+import "../../../Fonts/Fonts.css";
 
 export function AddReview() {
 

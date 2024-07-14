@@ -3,6 +3,7 @@
 }
 
 .contact-name {
+  font-family: 'Montserrat-bold';
   background-color: black;
   color: white;
   display: flex;
@@ -19,6 +20,10 @@
   padding-right: 25%;
   padding-bottom: 50px;
   background-color: #F7F7F7;
+}
+
+.contact-content-description h1 {
+  font-family: 'AGaramondPro';
 }
 
 .contact-content-description p {
@@ -38,6 +43,7 @@
 .contact-content-details {
   display: flex;
   flex-direction: column;
+  font-weight: 600;
   gap: 30px;
 }
 
@@ -49,7 +55,7 @@
 
 .contact-content-fillbox label {
   font-size: 15px;
-  font-weight: 550;
+  font-weight: 600;
 }
 
 .contact-content-fillbox input {
@@ -72,6 +78,7 @@
 }
 
 .details-submit-button {
+  font-family: 'Montserrat-bold';
   color: black;
   border: none;
   background-color: #E0B973;

@@ -4,6 +4,7 @@ import { Navbar } from '../../components/Navbar/Navbar';
 import { MassengerIcon } from '../../components/Massenger/Massenger';
 import { ContactForm } from '../../components/ContactUs/ContactForm';
 import { Footer } from '../../components/Footer/Footer.jsx';
+import "../../Fonts/Fonts.css";
 
 
 function ContactView() {
@@ -22,7 +23,7 @@ function ContactView() {
             <div className='contact-content'>
                 <div className='contact-content-details'>
                     <div>Colombo, Sri Lanka</div>
-                    <div style={{ fontWeight: 'bold' }}>View Map
+                    <div style={{ fontFamily: 'Montserrat-bold' }}>View Map
                         <img src={require('../../images/arrow.png')} alt="arrow" style={{ height: 10, paddingLeft: 20, width: 30 }} />
                     </div>
                     <div>Phone: +94 112 345 678   <br />
@@ -32,7 +33,7 @@ function ContactView() {
                 <MassengerIcon />
             </div>
             <Footer />
-        </div>
+        </div >
     );
 }
 
