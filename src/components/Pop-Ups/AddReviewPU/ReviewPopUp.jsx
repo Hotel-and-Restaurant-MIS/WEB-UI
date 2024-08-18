@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './ReviewPopUp.css';
 import "../../../Fonts/Fonts.css";
 
-export function ReviewPopUp({ isOpen, handleClose }) {
+export function ReviewPopUp({ isOpen, handleClose, handleBtnPress }) {
 
 
   const [formData, setFormData] = useState({
@@ -14,9 +14,8 @@ export function ReviewPopUp({ isOpen, handleClose }) {
     if (!isOpen) {
       // Reset form data when the modal is closed
       setFormData({
-        input1: '',
-        input2: '',
-        input3: ''
+        name: "",
+        review: "",
       });
     }
   }, [isOpen]);
@@ -31,12 +30,15 @@ export function ReviewPopUp({ isOpen, handleClose }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(formData);
+    handleBtnPress(formData);
     handleClose();
   };
 
 
   const handleOverlayClick = (e) => {
     if (e.target === e.currentTarget) {
+      console.log("Overlay clicked");
       handleClose();
     }
   };

@@ -1,0 +1,12 @@
+.room-count {
+  display: flex;
+  flex: 10;
+  flex-direction: row;
+}
+
+.add_minus-icon {
+  width: 15px;
+  height: 20px;
+  padding: 5px;
+  cursor: pointer;
+}

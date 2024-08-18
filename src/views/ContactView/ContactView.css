@@ -37,7 +37,7 @@
   padding-top: 50px;
   padding-left: 25%;
   display: flex;
-  padding-bottom: 30px;
+  padding-bottom: 100px;
 }
 
 .contact-content-details {
@@ -45,46 +45,4 @@
   flex-direction: column;
   font-weight: 600;
   gap: 30px;
-}
-
-.contact-content-fillbox {
-  padding-left: 200px;
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-content-fillbox label {
-  font-size: 15px;
-  font-weight: 600;
-}
-
-.contact-content-fillbox input {
-  border: 1px solid black;
-  padding: 10px;
-  width: 17rem;
-  margin-bottom: 20px;
-}
-
-.contact-content-fillbox textarea {
-  border: 1px solid black;
-  padding: 10px;
-  width: 17rem;
-  margin-bottom: 20px;
-}
-
-.details-button-container {
-  display: flex;
-  justify-content: right;
-}
-
-.details-submit-button {
-  font-family: 'Montserrat-bold';
-  color: black;
-  border: none;
-  background-color: #E0B973;
-  padding: 10px 20px;
-  font-size: 12pt;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
 }

@@ -2,7 +2,6 @@ import React from 'react';
 import './ContactView.css';
 import { Navbar } from '../../components/Navbar/Navbar';
 import { MassengerIcon } from '../../components/Massenger/Massenger';
-import { ContactForm } from '../../components/ContactUs/ContactForm';
 import { Footer } from '../../components/Footer/Footer.jsx';
 import "../../Fonts/Fonts.css";
 
@@ -29,7 +28,6 @@ function ContactView() {
                     <div>Phone: +94 112 345 678   <br />
                         Email: luxury_hotels@gmail.com</div>
                 </div>
-                <ContactForm />
                 <MassengerIcon />
             </div>
             <Footer />

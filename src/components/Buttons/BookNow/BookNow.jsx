@@ -20,7 +20,7 @@ export function BookNow() {
     <div>
       <button className="book-now-btn" onClick={handleBookNowOpen}>
         <img src={require('../../../images/book-now.png')} alt="book-now-img" />
-        BOOK NOW</button>
+        RESERVE NOW</button>
       <BookNowPU isOpen={isBookNowOpen} handleClose={handleBookNowClose} />
     </div>
 
