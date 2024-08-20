@@ -1,6 +1,5 @@
 .room-count {
   display: flex;
-  flex: 10;
   flex-direction: row;
 }
 
@@ -9,4 +8,12 @@
   height: 20px;
   padding: 5px;
   cursor: pointer;
+}
+
+.count-input {
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 0px;
 }

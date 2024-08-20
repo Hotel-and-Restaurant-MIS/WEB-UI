@@ -1,49 +1,32 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './AddReview.css';
 import { ReviewPopUp } from '../../Pop-Ups/AddReviewPU/ReviewPopUp';
 import "../../../Fonts/Fonts.css";
-import { axiosInstance } from '../../../constants';
 
 export function AddReview() {
 
+  // State to manage the visibility of the review pop-up
   const [isReviewPopUpOpen, setReviewPopUpOpen] = useState(false);
 
-  const [data, setData] = useState(null);
-
+  // Open the review pop-up when the button is clicked
   const handleOpenReviewPopUp = () => {
     setReviewPopUpOpen(true);
   };
 
+  // Close the review pop-up
   const handleCloseReviewPopUp = () => {
     setReviewPopUpOpen(false);
   };
 
-  const handleBtnPress = async (formData) => {
-    setData(formData);
-  }
-
-  useEffect(() => {
-
-    async function addReview() {
-      await axiosInstance.post("/review/temp/add", data);
-    }
-
-    if (data != null) {
-      addReview();
-      setData(null);
-    } else {
-      return;
-    }
-  }, [data])
-
   return (
     <div className="review-button-container">
+      {/* Button to open the review pop-up */}
       <button className='review-button' onClick={handleOpenReviewPopUp}>
         Add Review
       </button>
-      <ReviewPopUp isOpen={isReviewPopUpOpen} handleClose={handleCloseReviewPopUp} handleBtnPress={handleBtnPress} />
-    </div>
 
+      {/* Review pop-up component */}
+      <ReviewPopUp isOpen={isReviewPopUpOpen} handleClose={handleCloseReviewPopUp} />
+    </div>
   );
 }
-

@@ -9,30 +9,35 @@ export function NavArrow() {
   const navigate = useNavigate();
   const location = useLocation();
 
+  // Navigate to the previous page based on the current location
   const handleLeftClick = () => {
     if (location.pathname === '/facilities') {
-      navigate('/');
+      navigate('/'); // Go to the home page
     }
     else if (location.pathname === '/rooms') {
-      navigate('/facilities');
+      navigate('/facilities'); // Go to the facilities page
     }
   };
 
+  // Navigate to the next page based on the current location
   const handleRightClick = () => {
     if (location.pathname === '/') {
-      navigate('/facilities');
+      navigate('/facilities'); // Go to the facilities page
     } else if (location.pathname === '/facilities') {
-      navigate('/rooms');
+      navigate('/rooms'); // Go to the rooms page
     } else if (location.pathname === '/rooms') {
-      navigate('/contactus');
-    };
+      navigate('/contactus'); // Go to the contact us page
+    }
   }
 
   return (
     <div className='arrow-container'>
+      {/* Left arrow to navigate to the previous page */}
       <div className='left-arrow' onClick={handleLeftClick}>
         <LeftArrow />
       </div>
+
+      {/* Right arrow to navigate to the next page */}
       <div className='right-arrow' onClick={handleRightClick}>
         <RightArrow />
       </div>

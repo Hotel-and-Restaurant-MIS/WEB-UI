@@ -8,15 +8,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 1;
 }
 
 .booknow-popup-container {
   background-color: white;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   max-width: 500px;
   width: 100%;
   text-align: center;
+  opacity: 100%;
 }
 
 .booknow-popup-topic {
@@ -115,6 +117,10 @@
   padding-right: 40px;
 }
 
+.room-price {
+  padding-left: 10px;
+}
+
 .room-selection {
   display: flex;
   justify-content: space-between;
@@ -133,7 +139,7 @@
 }
 
 .room-selection input {
-  max-width: 100px;
+  max-width: 50px;
 }
 
 .booknow-form-button {
@@ -146,4 +152,12 @@
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.success-message {
+  margin-top: 10px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
 }

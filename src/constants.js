@@ -1,7 +1,14 @@
 import axios from 'axios';
 
-const baseUrl = "http://localhost:8080";
+const reviewUrl = "http://localhost:8081";
+const reservationUrl = "http://localhost:8080";
 
-export const axiosInstance = axios.create({
-  baseURL: baseUrl,
+export const reviewInstance = axios.create({
+  baseURL: reviewUrl,
+});
+
+
+
+export const reservationInstance = axios.create({
+  baseURL: reservationUrl,
 });
