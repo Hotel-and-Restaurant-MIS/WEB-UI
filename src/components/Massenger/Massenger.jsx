@@ -8,7 +8,7 @@ export function MassengerIcon() {
   const handleOpenAssistant = () => {
     setAssistantOpen(true);
   };
-
+  
   const handleCloseAssistant = () => {
     setAssistantOpen(false);
   };
@@ -16,6 +16,7 @@ export function MassengerIcon() {
   return (
     <div className="massenger-icon">
       <img src={require("../../images/messenger-icon.png")} alt="Icon" onClick={handleOpenAssistant} />
+      
       <Assistant isOpen={isAssistantOpen} handleClose={handleCloseAssistant} />
     </div>
   );
