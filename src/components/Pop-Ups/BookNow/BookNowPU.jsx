@@ -89,7 +89,11 @@ export function BookNowPU({ isOpen, handleClose }) {
     if (formData.fromDate && formData.toDate && roomPrice) {
       const dayRange = new Date(formData.toDate) - new Date(formData.fromDate);
       const calculatedTotalPrice = roomPrice * parseInt(formData.roomQuantity, 10) * (dayRange / (1000 * 60 * 60 * 24)); // Convert milliseconds to days
-      setTotalPrice(calculatedTotalPrice);
+      if (calculatedTotalPrice < 0) {
+        setTotalPrice(calculatedTotalPrice);
+      } else {
+        setTotalPrice(0);
+      }
     } else {
       setTotalPrice(0);
     }
@@ -104,7 +108,7 @@ export function BookNowPU({ isOpen, handleClose }) {
 
     // Validate date range
     if (toDate <= fromDate) {
-      alert("The 'To' date must be later than the 'From' date.");
+      alert("The date period is invalid.");
       return;
     }
 
@@ -269,7 +273,7 @@ export function BookNowPU({ isOpen, handleClose }) {
                   />
                 </div>
                 <div className='room-price'>
-                  {totalPrice} {/* Display the totalPrice which is initially set to 0 */}
+                  {totalPrice}.00 {/* Display the totalPrice which is initially set to 0 */}
                 </div>
               </div>
               <button className='booknow-form-button' type='submit'>Book Now</button>

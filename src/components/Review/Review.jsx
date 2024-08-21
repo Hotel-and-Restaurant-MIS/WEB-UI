@@ -30,7 +30,7 @@ export function Review() {
       setCurrentReviewIndex(prevIndex =>
         prevIndex === reviews.length - 1 ? 0 : prevIndex + 1 // Cycle through reviews
       );
-    }, 60000); // Change review every 1 minute
+    }, 30000); // Change review every 1 minute
 
     return () => clearInterval(interval); // Clear the interval on component unmount
   }, [reviews]);

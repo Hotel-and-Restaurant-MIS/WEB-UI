@@ -47,12 +47,12 @@ function RoomsView() {
                 {rooms.map(room => (
                     <RoomType
                         key={room.roomTypeName}  // Ensure your data has an id or unique identifier
-                        src={room.roomTypeName === 'SINGLE ROOM' ? SingleBedImage :
-                            room.name === 'DOUBLE ROOM' ? DoubleBedImage :
+                        src={room.roomTypeName === 'Single Room' ? SingleBedImage :
+                            room.name === 'Double Room' ? DoubleBedImage :
                                 TwinBedImage} // Map image based on room type name
                         alt={room.roomTypeName}
                         name={room.roomTypeName}
-                        price={`LKR ${room.pricePerDay} Avg/Night`}
+                        price={`LKR ${room.pricePerDay}.00 Avg/Night`}
                     />
                 ))}
                 <Review />
