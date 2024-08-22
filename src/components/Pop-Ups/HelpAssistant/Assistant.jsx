@@ -13,6 +13,7 @@ export function Assistant({ isOpen, handleClose }) {
 
   return (
     <div className="assistant-overlay" onClick={handleOverlayClick}>
+
       {/* <div className="assistant-content">
         <div className="assistant-name" >
           <h2>Assistant</h2>
@@ -21,8 +22,7 @@ export function Assistant({ isOpen, handleClose }) {
           Hello! How Can I help you?
         </div>
       </div> */}
-    <iframe title="chatbot" height="430" width="350" src="https://bot.dialogflow.com/6d9d6c84-437c-4cb2-9fae-fdfb9aae0ca4"></iframe>
-
+    <iframe title='Chatbot' width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/6d9d6c84-437c-4cb2-9fae-fdfb9aae0ca4"></iframe>
     </div>
   );
 }
