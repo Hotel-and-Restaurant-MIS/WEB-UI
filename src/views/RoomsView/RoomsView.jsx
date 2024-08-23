@@ -4,7 +4,7 @@ import { MainContent } from '../../components/Maincontent/MainContent.jsx';
 import { MassengerIcon } from '../../components/Massenger/Massenger.jsx';
 import { Review } from '../../components/Review/Review.jsx';
 import { AddReview } from '../../components/Buttons/AddReview/AddReview.jsx';
-import { NavArrow } from '../../components/NavArrow/NavArrow.jsx';
+// import { NavArrow } from '../../components/NavArrow/NavArrow.jsx';
 import { RoomType } from '../../components/Rooms/RoomType.jsx';
 import SingleBedImage from '../../images/RoomImages/singlebed.png';
 import DoubleBedImage from '../../images/RoomImages/doublebed.png';
