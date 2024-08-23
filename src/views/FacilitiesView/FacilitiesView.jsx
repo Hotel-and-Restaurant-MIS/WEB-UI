@@ -34,7 +34,7 @@ function FacilitiesView() {
                 <Locations src={RestaurantImage} alt="Restaurant Image" name="RESTAURANT" />
                 <Locations src={LaundryImage} alt="Laundry Image" name="LAUNDRY" />
                 <Review />
-                <NavArrow />
+                {/* <NavArrow /> */}
                 <AddReview />
             </section>
             <MassengerIcon />

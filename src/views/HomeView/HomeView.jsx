@@ -48,7 +48,7 @@ function HomeView() {
                     </div>
                 </div>
                 <Review />
-                <NavArrow />
+                {/* <NavArrow /> */}
                 <AddReview />
                 <Footer />
             </section>
