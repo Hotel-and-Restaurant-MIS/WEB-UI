@@ -8,22 +8,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
 
-
 .assistant-content {
-  background-color: #F7F7F7;
+  background-color: #f0eded;
   padding-top: 5px;
-  padding-bottom: 300px;
+  padding-bottom: 20px;
   border-radius: 5px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   position: relative;
-  min-width: 500px;
+  width: 600px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
 }
 
 .assistant-name {
   border-bottom: 1px solid black;
+  text-align: center;
 }
 
 .assistant-name h2 {
@@ -31,11 +34,103 @@
   margin: 0;
 }
 
-.assistant-message {
+.conversation-history {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  /* Stack messages vertically */
+  padding: 0 10px;
+  padding-top: 20px;
+
+}
+
+.user-message {
+  max-width: 350px;
+  padding: 15px;
+  border-radius: 50px;
+  margin: 5px;
+  color: white;
+  align-self: flex-end;
+  /* Align user messages to the right */
+  /* border: 0.05rem solid black; */
+  background-color: rgb(56, 77, 158);
+  word-wrap: break-word;
+  /* Allow long words to break and wrap onto the next line */
+  opacity: 0;
+  /* Start invisible */
+  transform: translateX(20px);
+  /* Start slightly lower */
+  animation: fadeInLeft 0.7s ease forwards;
+  /* Animation for fade-in and move up */
+}
+
+@keyframes fadeInLeft {
+  to {
+    opacity: 1;
+    /* Fully visible */
+    transform: translateX(0);
+    /* Move to original position */
+  }
+}
+
+.ai-message {
+  max-width: 350px;
   background-color: white;
-  border: 1px solid black;
-  margin: 15px;
-  margin-right: 200px;
+  padding: 15px;
+  border-radius: 50px;
+  margin: 5px;
+  align-self: flex-start;
+  opacity: 0;
+  /* Start invisible */
+  transform: translateX(-20px);
+  /* Start slightly lower */
+  animation: fadeInLeft 0.7s ease forwards;
+  /* Animation for fade-in and move up */
+}
+
+/* Define the keyframes for the fade-Left and move-up animation */
+@keyframes fadeInLeft {
+  to {
+    opacity: 1;
+    /* Fully visible */
+    transform: translateX(0);
+    /* Move to original position */
+  }
+}
+
+
+.assistant-input {
+  display: flex;
+  justify-content: flex-end;
+  /* Align items to the end (right side) */
+  align-items: center;
+  /* Center items vertically (optional) */
+  margin-top: 1rem;
+  /* Optional: adds spacing above */
+}
+
+.assistant-input input {
+  flex: 1;
   padding: 10px;
   border-radius: 5px;
+  border: 1px solid #ccc;
+  margin: 10px 10px 10px 30px;
+}
+
+.assistant-input button {
+  margin: 10px 30px 10px 10px;
+  padding: 10px 25px;
+  border: none;
+  background-color: #C4C4C4;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.assistant-input button:hover {
+  background-color: #E0B973;
+  box-shadow: 0 0 1rem #E0B973;
 }
