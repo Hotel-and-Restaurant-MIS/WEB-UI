@@ -18,10 +18,11 @@ export function BookNowPU({ isOpen, handleClose }) {
     roomQuantity: '1', // Default room quantity is '1'
   });
 
-  // State for room price, max room count, total price, and submission status
+  // State for room price, max room count, total price, date range validity, and submission status
   const [roomPrice, setRoomPrice] = useState(0);
   const [maxRoomCount, setMaxRoomCount] = useState(1);
   const [totalPrice, setTotalPrice] = useState(0); // Initialize totalPrice to 0
+  const [isDateRangeValid, setIsDateRangeValid] = useState(true); // Track date range validity
   const [isReservationSuccessful, setIsReservationSuccessful] = useState(false); // New state for success message
 
   // Update the room quantity in the state
@@ -86,16 +87,18 @@ export function BookNowPU({ isOpen, handleClose }) {
 
   // Calculate total price and update it
   useEffect(() => {
-    if (formData.fromDate && formData.toDate && roomPrice) {
-      const dayRange = new Date(formData.toDate) - new Date(formData.fromDate);
-      const calculatedTotalPrice = roomPrice * parseInt(formData.roomQuantity, 10) * (dayRange / (1000 * 60 * 60 * 24)); // Convert milliseconds to days
-      if (calculatedTotalPrice < 0) {
-        setTotalPrice(calculatedTotalPrice);
-      } else {
-        setTotalPrice(0);
-      }
+    const fromDate = new Date(formData.fromDate);
+    const toDate = new Date(formData.toDate);
+    const dayRange = (toDate - fromDate) / (1000 * 60 * 60 * 24); // Calculate the number of days
+
+    // Ensure the date range is positive
+    if (dayRange > 0) {
+      const calculatedTotalPrice = roomPrice * parseInt(formData.roomQuantity, 10) * dayRange;
+      setTotalPrice(calculatedTotalPrice); // Set the correct total price
+      setIsDateRangeValid(true); // Set date range validity to true
     } else {
-      setTotalPrice(0);
+      setTotalPrice(0); // If the date range is invalid, set total price to 0
+      setIsDateRangeValid(false); // Set date range validity to false
     }
   }, [roomPrice, formData.roomQuantity, formData.fromDate, formData.toDate]);
 
@@ -260,9 +263,9 @@ export function BookNowPU({ isOpen, handleClose }) {
                     readOnly // This will make the dropdown uneditable but still show the arrow
                   >
                     <option value="" disabled>Select Room Type</option>
-                    <option value="Single Room">Single Room</option>
-                    <option value="Double Room">Double Room</option>
-                    <option value="Twin Room">Twin Room</option>
+                    <option value="SINGLE ROOM">SINGLE ROOM</option>
+                    <option value="DOUBLE ROOM">DOUBLE ROOM</option>
+                    <option value="TWIN ROOM">TWIN ROOM</option>
                   </select>
                 </div>
                 <div>
@@ -270,6 +273,7 @@ export function BookNowPU({ isOpen, handleClose }) {
                     value={formData.roomQuantity}
                     roomCount={maxRoomCount}
                     onChange={handleRoomQuantityChange}
+                    disabled={!isDateRangeValid} // Disable RoomCounter if date range is invalid
                   />
                 </div>
                 <div className='room-price'>
