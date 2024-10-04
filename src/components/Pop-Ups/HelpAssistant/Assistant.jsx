@@ -27,7 +27,7 @@ export function Assistant({ isOpen, handleClose }) {
     try {
       const API_KEY = process.env.REACT_APP_API_KEY;
       const genAI = new GoogleGenerativeAI(API_KEY);
-      const model = await genAI.getGenerativeModel({ model: "tunedModels/luxury-restaurant-abis6m9ywrxa" });
+      const model = genAI.getGenerativeModel({ model: "tunedModels/luxury-restaurant-abis6m9ywrxa" });
       const result = await model.generateContent(userPrompt);
 
       // Add the AI's response to the conversation
