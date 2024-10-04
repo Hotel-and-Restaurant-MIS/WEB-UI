@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './ReviewPopUp.css';
 import "../../../Fonts/Fonts.css";
-import { reviewInstance } from '../../../constants.js';
+import { urlInstance } from '../../../constants.js';
 
 export function ReviewPopUp({ isOpen, handleClose }) {
 
@@ -25,7 +25,7 @@ export function ReviewPopUp({ isOpen, handleClose }) {
     e.preventDefault();
     console.log(formData); // Log data for debugging
     try {
-      await reviewInstance.post("/review/temp/add", formData);
+      await urlInstance.post("/review/temp/add", formData);
       setFormData({
         name: '',
         review: '',

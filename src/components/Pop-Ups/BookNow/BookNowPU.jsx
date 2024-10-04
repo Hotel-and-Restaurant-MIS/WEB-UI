@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './BookNowPU.css';
 import "../../../Fonts/Fonts.css";
 import { RoomCounter } from '../../../components/Counter/RoomCount.jsx';
-import { reservationInstance } from "../../../constants.js";
+import { urlInstance } from "../../../constants.js";
+
 
 export function BookNowPU({ isOpen, handleClose }) {
 
@@ -46,7 +47,7 @@ export function BookNowPU({ isOpen, handleClose }) {
   useEffect(() => {
     const fetchRoomPrice = async () => {
       try {
-        const response = await reservationInstance.get("/roomType/price");
+        const response = await urlInstance.get("/roomtype/price");
         const roomTypeData = response.data.find(record => record.roomTypeName === formData.roomType);
         if (roomTypeData) {
           setRoomPrice(roomTypeData.pricePerDay);
@@ -74,7 +75,7 @@ export function BookNowPU({ isOpen, handleClose }) {
     }));
 
     try {
-      const response = await reservationInstance.get(`/booking/roomType/available?from=${formData.fromDate}&to=${formData.toDate}`);
+      const response = await urlInstance.get(`/bookings/totalAvailableRoomCount?from=${formData.fromDate}&to=${formData.toDate}`);
       const roomTypeData = response.data.find(record => record.roomTypeName === selectedRoomType);
       if (roomTypeData) {
         setMaxRoomCount(roomTypeData.availableCount);
@@ -119,7 +120,7 @@ export function BookNowPU({ isOpen, handleClose }) {
       console.log(formData); // Log form data for debugging
 
       // Send form data to the server
-      const customerResponse = await reservationInstance.post("/reservations/customer/add", {
+      const customerResponse = await urlInstance.post("/customer/add", {
         name: formData.name,
         email: formData.email,
         nic: formData.nic,
@@ -128,7 +129,7 @@ export function BookNowPU({ isOpen, handleClose }) {
       console.log("Success");
       const customerId = customerResponse.data.customerId;
 
-      await reservationInstance.post("/reservations/add", {
+      await urlInstance.post("/reservations/add", {
         customerId: customerId,
         checkinDate: formData.fromDate,
         checkoutDate: formData.toDate,

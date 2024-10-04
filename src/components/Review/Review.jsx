@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "./Review.css";
 import "../../Fonts/Fonts.css";
-import { reviewInstance } from '../../constants';
+import { urlInstance } from '../../constants';
 
 export function Review() {
 
@@ -15,7 +15,7 @@ export function Review() {
   useEffect(() => {
     async function fetchReviews() {
       try {
-        const response = await reviewInstance.get("/review/approved");
+        const response = await urlInstance.get("/review/approved");
         updateReviews(response.data); // Update state with fetched reviews
       } catch (e) {
         console.error("Error fetching reviews:", e); // Handle any errors during fetch
@@ -30,7 +30,7 @@ export function Review() {
       setCurrentReviewIndex(prevIndex =>
         prevIndex === reviews.length - 1 ? 0 : prevIndex + 1 // Cycle through reviews
       );
-    }, 30000); // Change review every 1 minute
+    }, 30000); // Change review every 0.5 minute
 
     return () => clearInterval(interval); // Clear the interval on component unmount
   }, [reviews]);
