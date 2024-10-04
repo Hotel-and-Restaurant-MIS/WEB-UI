@@ -1,12 +1,18 @@
 import React from 'react';
 import './ContactView.css';
+import { useNavigate } from 'react-router-dom';
 import { Navbar } from '../../components/Navbar/Navbar';
 import { MassengerIcon } from '../../components/Massenger/Massenger';
 import { Footer } from '../../components/Footer/Footer.jsx';
 import "../../Fonts/Fonts.css";
-
-
 function ContactView() {
+
+    const navigate = useNavigate(); // Initialize the useNavigate hook
+
+    // Function to navigate to the map page
+    const navigateToMap = () => {
+        navigate('/contactus/map'); // Navigate to the map route
+    }
 
     return (
         <div>
@@ -22,7 +28,8 @@ function ContactView() {
             <div className='contact-content'>
                 <div className='contact-content-details'>
                     <div>Colombo, Sri Lanka</div>
-                    <div style={{ fontFamily: 'Montserrat-bold' }}>View Map
+                    <div style={{ fontFamily: 'Montserrat-bold' }}>
+                        <button onClick={navigateToMap}>View Map</button>
                         <img src={require('../../images/arrow.png')} alt="arrow" style={{ height: 10, paddingLeft: 20, width: 30 }} />
                     </div>
                     <div>Phone: +94 112 345 678   <br />
@@ -31,7 +38,7 @@ function ContactView() {
                 <MassengerIcon />
             </div>
             <Footer />
-        </div >
+        </div>
     );
 }
 
