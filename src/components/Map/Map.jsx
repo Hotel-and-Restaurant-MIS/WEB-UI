@@ -1,6 +1,6 @@
 import React from "react";
 import { useJsApiLoader, GoogleMap, Marker } from "@react-google-maps/api";
-import markerIcon from '../../images/hotelicon.jpg'; // Adjust the path to your image
+import markerIcon from '../../images/hotelicon.png'; // Adjust the path to your image
 
 const Map = () => {
   const center = {

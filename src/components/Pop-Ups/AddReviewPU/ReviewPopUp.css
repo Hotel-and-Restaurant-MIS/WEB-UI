@@ -13,45 +13,46 @@
 
 .review-popup-content {
   background-color: white;
-  padding: 5px;
-  border-radius: 5px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
   position: relative;
-  min-width: 300px;
+  width: 30rem;
 }
 
 .review-popup-content h1 {
   font-family: 'Montserrat-bold';
   display: flex;
-  padding-bottom: 10px;
+  padding-bottom: 0.625rem;
   justify-content: center;
-  font-size: 20px;
+  font-size: 1.25rem;
 
 }
 
 .review-popup-form {
   display: flex;
   flex-direction: column;
-  padding-right: 50px;
-  padding-left: 30px;
+  padding-right: 3.125rem;
+  padding-left: 1.875rem;
 }
 
 .review-popup-form div {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .review-popup-form label {
   font-weight: bold;
   flex: 1;
-  margin-right: 30px;
+  margin-right: 1.875rem;
   align-content: center;
 }
 
 .review-popup-form input {
-  padding: 8px;
+  padding: 0.5rem;
   border: 1px solid black;
   font-size: 1em;
+  width: 15rem;
 
 }
 
@@ -59,7 +60,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 0px;
+  margin-bottom: 0rem;
 }
 
 .review-submit-button {
@@ -67,10 +68,15 @@
   color: black;
   border: none;
   background-color: #C4C4C4;
-  padding: 8px 18px;
-  font-size: 14px;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.875rem;
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   cursor: pointer;
+  transition: 0.3s ease-in;
+}
 
+.review-submit-button:hover {
+  background-color: #A9A9A9;
+  box-shadow: 0 0 0.5rem #A9A9A9;
 }

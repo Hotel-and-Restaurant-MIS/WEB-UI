@@ -6,7 +6,7 @@
   height: 100vh;
   background: url('../../images/home-hero.png') no-repeat center center/cover;
   background-color: rgba(16, 33, 65, 0.7);
-  opacity: 95%;
+  opacity: 0.95;
   background-blend-mode: overlay;
   color: white;
   text-align: center;
@@ -16,16 +16,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 30px;
-  padding-bottom: 20px;
-  font-size: 24px;
+  padding-top: 1.875rem;
+  padding-bottom: 1.25rem;
+  font-size: 1.5rem;
 }
 
 .home-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 15%;
+  padding: 1.875rem 15%;
 }
 
 .home-container-cont {
@@ -38,19 +38,19 @@
 .home-container-cont h1 {
   font-family: 'AGaramondPro';
   font-weight: bolder;
-  font-size: 40px;
+  font-size: 2.5rem;
   margin-top: 0%;
 }
 
 .home-container-cont h2 {
   font-family: 'AGaramondPro';
   font-weight: bolder;
-  font-size: 32px;
+  font-size: 2rem;
   margin: 0;
 }
 
 .home-container-cont p {
-  font-size: 20px;
+  font-size: 1.25rem;
   margin: 1%;
 }
 

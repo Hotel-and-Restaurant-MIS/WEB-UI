@@ -29,7 +29,9 @@ function ContactView() {
                 <div className='contact-content-details'>
                     <div>Colombo, Sri Lanka</div>
                     <div style={{ fontFamily: 'Montserrat-bold' }}>
-                        <button onClick={navigateToMap}>View Map</button>
+                        <span onClick={navigateToMap} style={{ cursor: 'pointer' }}>
+                            View Map
+                        </span>
                         <img src={require('../../images/arrow.png')} alt="arrow" style={{ height: 10, paddingLeft: 20, width: 30 }} />
                     </div>
                     <div>Phone: +94 112 345 678   <br />
