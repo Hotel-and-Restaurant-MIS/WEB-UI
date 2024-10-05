@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 30px;
+  padding-bottom: 1.875rem;
 }
 
 .review-button {
@@ -10,9 +10,19 @@
   color: black;
   border: none;
   background-color: #C4C4C4;
-  padding: 10px 25px;
-  font-size: 11pt;
+  padding: 0.625rem 1.5rem;
+  font-size: 1rem;
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+
+.review-button:hover {
+  background-color: #AFAFAF;
+  /* Darker gray on hover for feedback */
+  transform: scale(1.025);
+  /* Slightly enlarge the button on hover */
+  box-shadow: 0 0 0.75rem 0.1rem #AFAFAF;
+  ;
 }

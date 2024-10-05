@@ -4,16 +4,23 @@
 }
 
 .add_minus-icon {
-  width: 15px;
-  height: 20px;
-  padding: 5px;
+  width: 1.75rem;
+  height: 1rem;
+  padding: 0.325rem;
   cursor: pointer;
+  transition: 0.5s;
+}
+
+
+.add_minus-icon:hover {
+  transform: scale(1.1);
+  /* Slightly increase size on hover for interactivity */
 }
 
 .count-input {
   border: 1px solid #ccc;
-  border-radius: 2px;
+  border-radius: 0.125rem;
   text-align: center;
-  padding-left: 10px;
-  padding-right: 0px;
+  padding-left: 0.625rem;
+  width: 3.125rem;
 }
