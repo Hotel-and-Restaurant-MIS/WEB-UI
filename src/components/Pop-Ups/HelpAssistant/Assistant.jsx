@@ -30,9 +30,29 @@ export function Assistant({ isOpen, handleClose }) {
       const model = await genAI.getGenerativeModel({ model: "tunedModels/luxury-restaurant-abis6m9ywrxa" });
       const result = await model.generateContent(userPrompt);
 
-      // Add the AI's response to the conversation
-      const aiResponse = result.response.text();
-      setConversation([...newConversation, { sender: 'ai', message: aiResponse }]);
+      // Refactor the AI's response to handle bold and paragraphs
+      let aiResponse = result.response.text();
+
+      // Step 1: Split response into paragraphs by looking for double newlines (\n\n)
+      const paragraphParts = aiResponse.split('\n\n');
+
+      // Step 2: For each paragraph, handle bold text using **word**
+      const formattedResponse = paragraphParts.map((paragraph, index) => {
+        // Split the paragraph based on bold markers **word**
+        const parts = paragraph.split(/\*\*(.*?)\*\*/g);
+
+        // Format each part of the paragraph, adding bold style when necessary
+        return (
+          <p key={index}>
+            {parts.map((part, i) =>
+              i % 2 === 1 ? <span key={i} style={{ fontWeight: 'bold' }}>{part}</span> : part
+            )}
+          </p>
+        );
+      });
+
+      // Add the formatted response to the conversation
+      setConversation([...newConversation, { sender: 'ai', message: formattedResponse }]);
     } catch (error) {
       console.error('Error generating AI response:', error);
       setConversation([...newConversation, { sender: 'ai', message: 'Error fetching AI response.' }]);
@@ -40,6 +60,7 @@ export function Assistant({ isOpen, handleClose }) {
 
     setUserPrompt(''); // Clear the input field after asking
   };
+
 
   // Auto-scroll to the bottom when conversation changes
   useEffect(() => {

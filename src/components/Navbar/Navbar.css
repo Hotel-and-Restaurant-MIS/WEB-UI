@@ -1,12 +1,12 @@
 .navbar-main-cont {
-  padding: 0 10% 10px 12%;
+  padding: 0 10% 1% 12%;
   display: flex;
   justify-content: space-between;
 }
 
 .nav-link-cont {
   font-family: 'Montserrat';
-  padding: 40px 0px 0px 0px;
+  padding: 2.5rem 0 0 0;
 }
 
 .nav-logo {
@@ -16,8 +16,7 @@
   align-items: center;
   background-color: #E0B973;
   padding: 1.8rem 1.5rem;
-  border-radius: 0 0 25px 25px;
-  /* margin-left: 3rem; */
+  border-radius: 0 0 1.5rem 1.5rem;
 }
 
 .nav-logo h1 {
@@ -36,7 +35,7 @@
 
 
 .nav-link {
-  padding: 0 70px 0 10px;
+  padding: 0 4.375rem 0 0.625rem;
   color: #fff;
   font-weight: 550;
   text-decoration: none;
@@ -44,7 +43,7 @@
 
 .active-nav-link {
   font-family: 'Montserrat-bold';
-  padding: 0px 70px 0 10px;
+  padding: 0px 4.375rem 0 0.625rem;
   color: #fff;
   font-weight: bold;
   text-decoration: underline;

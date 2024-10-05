@@ -12,16 +12,16 @@
 
 .assistant-content {
   background-color: #f0eded;
-  padding-top: 5px;
-  padding-bottom: 20px;
-  border-radius: 5px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  padding-top: 0.3125rem;
+  padding-bottom: 1.25rem;
+  border-radius: 0.3125rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
   position: relative;
-  width: 600px;
-  height: 500px;
+  width: 40rem;
+  height: 32rem;
   display: flex;
   flex-direction: column;
-  font-size: 15px;
+  font-size: 1rem;
 }
 
 .assistant-name {
@@ -30,27 +30,28 @@
 }
 
 .assistant-name h2 {
-  padding: 10px;
+  padding-top: 0.25rem;
+  padding-bottom: 0.5rem;
   margin: 0;
 }
 
 .conversation-history {
   flex: 1;
   overflow-y: auto;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   display: flex;
   flex-direction: column;
   /* Stack messages vertically */
-  padding: 0 10px;
-  padding-top: 20px;
+  padding: 0 0.625rem;
+  padding-top: 1.25rem;
 
 }
 
 .user-message {
-  max-width: 350px;
-  padding: 15px;
-  border-radius: 50px;
-  margin: 5px;
+  max-width: 22rem;
+  padding: 1rem;
+  border-radius: 3.125rem;
+  margin: 0.3125rem;
   color: white;
   align-self: flex-end;
   /* Align user messages to the right */
@@ -60,7 +61,7 @@
   /* Allow long words to break and wrap onto the next line */
   opacity: 0;
   /* Start invisible */
-  transform: translateX(20px);
+  transform: translateX(1.25rem);
   /* Start slightly lower */
   animation: fadeInLeft 0.7s ease forwards;
   /* Animation for fade-in and move up */
@@ -76,15 +77,15 @@
 }
 
 .ai-message {
-  max-width: 350px;
+  max-width: 22rem;
   background-color: white;
-  padding: 15px;
-  border-radius: 50px;
-  margin: 5px;
+  padding: 1rem;
+  border-radius: 3.125rem;
+  margin: 0.3125rem;
   align-self: flex-start;
   opacity: 0;
   /* Start invisible */
-  transform: translateX(-20px);
+  transform: translateX(-1.25rem);
   /* Start slightly lower */
   animation: fadeInLeft 0.7s ease forwards;
   /* Animation for fade-in and move up */
@@ -113,19 +114,19 @@
 
 .assistant-input input {
   flex: 1;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 0.625rem;
+  border-radius: 0.3125rem;
   border: 1px solid #ccc;
-  margin: 10px 10px 10px 30px;
+  margin: 0.625rem 0.625rem 0.625rem 1.875rem;
 }
 
 .assistant-input button {
-  margin: 10px 30px 10px 10px;
-  padding: 10px 25px;
+  margin: 0.625rem 1.875rem 0.625rem 0.625rem;
+  padding: 0.625rem 1.5625rem;
   border: none;
   background-color: #C4C4C4;
   color: black;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   cursor: pointer;
   transition: 0.5s;
 }

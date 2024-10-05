@@ -1,18 +1,18 @@
 .main-navbar {
-  padding: 20px;
+  padding: 1.25rem;
 }
 
 .main-hero-sub-text {
   font-family: 'Montserrat';
-  font-size: 30pt;
-  margin: 0 5px 0 5px;
+  font-size: 2.2rem;
+  margin: 0 0.3125rem;
   font-weight: 400;
 }
 
 .main-hero-main-text {
   font-family: 'AGaramondPro';
-  font-size: 72pt;
-  margin: 0 5px 0 5px;
+  font-size: 5.75rem;
+  margin: 0 0.325rem;
   font-weight: 700;
   letter-spacing: 0.075em;
   /* Adjust the value as needed */
@@ -20,15 +20,15 @@
 
 .main-hero-sub-text2 {
   font-family: 'AGaramondPro';
-  font-size: 30pt;
-  margin: 0 5px 0 5px;
+  font-size: 2.25rem;
+  margin: 0 0.325rem;
   font-weight: 600;
 }
 
 .main-hero-tag-line {
   font-family: 'Montserrat';
-  font-size: 14pt;
-  margin: 0 5px 0 5px;
+  font-size: 1.25rem;
+  margin: 0 0.325rem;
 }
 
 .main-hero-text-cont {
@@ -41,13 +41,13 @@
 .main-hero-scroll-text {
   font-family: 'Montserrat';
   padding-top: 3%;
-  font-size: 11pt;
+  font-size: 1rem;
   font-weight: 700;
-  letter-spacing: 1pt;
+  letter-spacing: 0.065rem;
 }
 
 .main-hero-scroll-down-icon {
-  height: 50px;
+  height: 3.25rem;
   fill: white;
 
 }
