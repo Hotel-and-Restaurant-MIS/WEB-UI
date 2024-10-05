@@ -1,5 +1,36 @@
+.main-hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  position: relative;
+}
+
 .main-navbar {
-  padding: 1.25rem;
+  margin-bottom: auto;
+  height: 25vh;
+}
+
+.main-hero-text-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 6% 15% 4% 12%;
+  flex-grow: 1;
+}
+
+.hero-book-now {
+  margin-bottom: 15rem;
+}
+
+.scroll-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .main-hero-sub-text {
@@ -7,15 +38,6 @@
   font-size: 2.2rem;
   margin: 0 0.3125rem;
   font-weight: 400;
-}
-
-.main-hero-main-text {
-  font-family: 'AGaramondPro';
-  font-size: 5.75rem;
-  margin: 0 0.325rem;
-  font-weight: 700;
-  letter-spacing: 0.075em;
-  /* Adjust the value as needed */
 }
 
 .main-hero-sub-text2 {
@@ -31,11 +53,13 @@
   margin: 0 0.325rem;
 }
 
-.main-hero-text-cont {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 6% 15% 4% 12%;
+.main-hero-main-text {
+  font-family: 'AGaramondPro';
+  font-size: 5.75rem;
+  margin: 0 0.325rem;
+  font-weight: 700;
+  letter-spacing: 0.075em;
+  /* Adjust the value as needed */
 }
 
 .main-hero-scroll-text {
@@ -50,4 +74,30 @@
   height: 3.25rem;
   fill: white;
 
+}
+
+@media (max-width: 450px) {
+  .main-hero-sub-text {
+    font-size: 1.75rem;
+  }
+
+  .main-hero-sub-text2 {
+    font-size: 1.75rem;
+  }
+
+  .main-hero-tag-line {
+    font-size: 1rem;
+  }
+
+  .main-hero-main-text {
+    font-size: 3.75rem;
+  }
+
+  .main-hero-scroll-text {
+    font-size: 0.875rem;
+  }
+
+  .hero-book-now {
+    margin-bottom: 10rem;
+  }
 }
