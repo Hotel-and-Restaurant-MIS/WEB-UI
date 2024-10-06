@@ -1,6 +1,0 @@
-[[redirects]]
-  from = "/api/*"
-  to = "http://34.136.246.135/:splat"  # Your backend API (still HTTP)
-  status = 200
-  force = true
-  headers = { "Access-Control-Allow-Methods" = "GET, POST, PUT, DELETE, OPTIONS" }

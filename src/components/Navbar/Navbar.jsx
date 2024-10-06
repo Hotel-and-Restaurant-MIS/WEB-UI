@@ -34,6 +34,7 @@ export function Navbar(props) {
                 <NavLink to="/contactus" className={({ isActive }) => (isActive ? 'active-nav-link' : 'nav-link')}>
                     Contact Us
                 </NavLink>
+                <box-icon name='menu'></box-icon>
             </nav>
         </div>
     )
