@@ -25,23 +25,37 @@ export function Assistant({ isOpen, handleClose }) {
     const newConversation = [...conversation, { sender: 'user', message: userPrompt }];
 
     try {
-      const API_KEY = process.env.REACT_APP_API_KEY;
-      const genAI = new GoogleGenerativeAI(API_KEY);
-      const model = await genAI.getGenerativeModel({ model: "tunedModels/luxury-restaurant-abis6m9ywrxa" });
-      const result = await model.generateContent(userPrompt);
+      const API_KEY = process.env.REACT_APP_API_KEY; // Get the API key from environment variables
+      const genAI = new GoogleGenerativeAI(API_KEY); // Initialize the Google Generative AI
+      const model = await genAI.getGenerativeModel({ model: "tunedModels/luxury-restaurant-abis6m9ywrxa" }); // Get the specific model
 
-      // Refactor the AI's response to handle bold and paragraphs
+      const generationConfig = {
+        temperature: 1,
+        topP: 0.95,
+        topK: 64,
+        maxOutputTokens: 8192,
+        responseMimeType: "text/plain",
+      };
+
+      // Prepare the input format for the model
+      const parts = [
+        { text: `input: ${userPrompt}` },
+        { text: 'output: ' },
+      ];
+
+      // Generate the AI response
+      const result = await model.generateContent({
+        contents: [{ role: 'user', parts }],
+        generationConfig,
+      });
+
+      // Process the AI's response
       let aiResponse = result.response.text();
 
-      // Step 1: Split response into paragraphs by looking for double newlines (\n\n)
+      // Split the response into paragraphs and handle bold text
       const paragraphParts = aiResponse.split('\n\n');
-
-      // Step 2: For each paragraph, handle bold text using **word**
       const formattedResponse = paragraphParts.map((paragraph, index) => {
-        // Split the paragraph based on bold markers **word**
         const parts = paragraph.split(/\*\*(.*?)\*\*/g);
-
-        // Format each part of the paragraph, adding bold style when necessary
         return (
           <p key={index}>
             {parts.map((part, i) =>
@@ -51,16 +65,17 @@ export function Assistant({ isOpen, handleClose }) {
         );
       });
 
-      // Add the formatted response to the conversation
+      // Update the conversation state with the AI response
       setConversation([...newConversation, { sender: 'ai', message: formattedResponse }]);
     } catch (error) {
       console.error('Error generating AI response:', error);
+      // Add an error message to the conversation if something goes wrong
       setConversation([...newConversation, { sender: 'ai', message: 'Error fetching AI response.' }]);
     }
 
-    setUserPrompt(''); // Clear the input field after asking
+    // Clear the input field after asking
+    setUserPrompt('');
   };
-
 
   // Auto-scroll to the bottom when conversation changes
   useEffect(() => {

@@ -79,7 +79,7 @@
 .ai-message {
   max-width: 22rem;
   background-color: white;
-  padding: 1rem;
+  padding: 0 1rem;
   border-radius: 3.125rem;
   margin: 0.3125rem;
   align-self: flex-start;
