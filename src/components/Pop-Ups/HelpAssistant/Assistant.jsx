@@ -91,7 +91,7 @@ export function Assistant({ isOpen, handleClose }) {
     <div className="assistant-overlay" onClick={handleOverlayClick}>
       <div className="assistant-content">
         <div className="assistant-name">
-          <h2>Assistant</h2>
+          <h2>LUXIE</h2>
         </div>
 
         {/* Conversation history */}

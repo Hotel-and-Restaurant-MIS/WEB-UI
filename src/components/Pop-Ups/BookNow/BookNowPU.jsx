@@ -281,7 +281,7 @@ export function BookNowPU({ isOpen, handleClose }) {
                   {totalPrice}.00 {/* Display the totalPrice which is initially set to 0 */}
                 </div>
               </div>
-              <button className='booknow-form-button' type='submit'>Book Now</button>
+              <button className='booknow-form-button' type='submit'>Reserve Now</button>
             </form>
           </div>
         )}
