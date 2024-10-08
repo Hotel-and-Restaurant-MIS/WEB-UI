@@ -11,6 +11,9 @@ export function ReviewPopUp({ isOpen, handleClose }) {
     review: '',
   });
 
+  // State to manage success message
+  const [isReviewSubmit, setReviewSubmit] = useState(false);
+
   // Update form data as user types
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -30,16 +33,13 @@ export function ReviewPopUp({ isOpen, handleClose }) {
         name: '',
         review: '',
       });
-      handleClose();
+      setReviewSubmit(true);
+      setTimeout(() => {
+        handleClose();
+        setReviewSubmit(false); // Reset review state when closing
+      }, 3000); // Hide message and close popup after 3 seconds
     } catch (e) {
       console.error(e);
-    }
-  };
-
-  // Close the pop-up when clicking outside of the form
-  const handleOverlayClick = (e) => {
-    if (e.target === e.currentTarget) {
-      handleClose();
     }
   };
 
@@ -47,26 +47,45 @@ export function ReviewPopUp({ isOpen, handleClose }) {
   if (!isOpen) return null;
 
   return (
-    <div className="review-popup-overlay" onClick={handleOverlayClick}>
+    <div className="review-popup-overlay">
       <div className="review-popup-content">
-        <h1>Add Review</h1>
-        <form className='review-popup-form' onSubmit={handleSubmit}>
-          <div className='review-popup'>
-            <label>
-              Your Name:
-            </label>
-            <input placeholder="Your Name" type="text" name="name" required value={formData.name} onChange={handleInputChange} />
-          </div>
-          <div className='review-popup'>
-            <label>
-              Review:
-            </label>
-            <input placeholder="Your Review" type="text" name="review" required value={formData.review} onChange={handleInputChange} />
-          </div>
-          <div className='review-popup-button-container'>
-            <button type="submit" className='review-submit-button'>Add Review</button>
-          </div>
-        </form>
+        {isReviewSubmit ? (
+          <div className="success-message">Review submitted successfully!</div>
+        ) : (
+          <>
+            <div className="review-popup-name">
+              <h1>Add Review</h1>
+              <span className='review-close-btn' onClick={handleClose}><i className='bx bx-x'></i></span>
+            </div>
+            <form className='review-popup-form' onSubmit={handleSubmit}>
+              <div className='review-popup'>
+                <label>Your Name:</label>
+                <input
+                  placeholder="Your Name"
+                  type="text"
+                  name="name"
+                  required
+                  value={formData.name}
+                  onChange={handleInputChange}
+                />
+              </div>
+              <div className='review-popup'>
+                <label>Review:</label>
+                <input
+                  placeholder="Your Review"
+                  type="text"
+                  name="review"
+                  required
+                  value={formData.review}
+                  onChange={handleInputChange}
+                />
+              </div>
+              <div className='review-popup-button-container'>
+                <button type="submit" className='review-submit-button'>Add Review</button>
+              </div>
+            </form>
+          </>
+        )}
       </div>
     </div>
   );

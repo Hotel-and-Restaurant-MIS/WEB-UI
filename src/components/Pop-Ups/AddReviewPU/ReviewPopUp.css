@@ -19,6 +19,14 @@
   width: 30rem;
 }
 
+.review-popup-name {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 .review-popup-content h1 {
   font-family: 'Montserrat-bold';
   display: flex;
@@ -76,6 +84,27 @@
 .review-submit-button:hover {
   background-color: #A9A9A9;
   box-shadow: 0 0 0.5rem #A9A9A9;
+}
+
+.review-close-btn {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  background-color: #C4C4C4;
+  border: none;
+  border-radius: 0.3125rem;
+  padding: 0.1rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.review-close-btn i {
+  font-size: 1.5rem;
+}
+
+.review-close-btn:hover {
+  background-color: #AFAFAF;
+  box-shadow: 0 0 0.5rem #AFAFAF;
 }
 
 /* Media Queries for responsiveness */

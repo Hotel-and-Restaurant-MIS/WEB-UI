@@ -16,7 +16,7 @@
   background-color: white;
   border-radius: 0.625rem;
   box-shadow: 0 0.5em 1rem rgba(0, 0, 0, 0.3);
-  width: 35rem;
+  width: 40%;
   text-align: center;
   opacity: 100%;
 }
@@ -25,11 +25,14 @@
   font-family: 'Montserrat-bold';
   background-color: black;
   color: white;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: bold;
-  padding-top: 0.625rem;
-  padding-bottom: 1.25rem;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-top-right-radius: 0.625rem;
+  border-top-left-radius: 0.625rem;
 }
 
 .booknow-popup-container {
@@ -56,8 +59,6 @@
   margin: 0;
 }
 
-
-
 .form-group-main {
   display: flex;
   flex-direction: column;
@@ -65,14 +66,12 @@
   /* Optional: Adds space between each form group */
 }
 
-
 .form-group {
   display: flex;
   align-items: center;
   font-size: 0.875rem;
   padding-right: 4rem;
   padding-left: 4rem;
-
 }
 
 .form-group label {
@@ -80,7 +79,6 @@
   flex: 1;
   text-align: left;
   /* Ensures the label text is aligned to the left */
-
 }
 
 .form-group input {
@@ -95,12 +93,18 @@
 
 .date-group {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   font-size: 0.875rem;
-  padding-left: 4.375rem;
+  padding-left: 4rem;
   padding-right: 2.5rem;
-  padding-top: 0.9375rem;
-  padding-bottom: 0.9375rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.date-group div label {
+  padding-right: 2rem;
+  text-align: left;
 }
 
 .date-group input {
@@ -131,7 +135,7 @@
   justify-content: space-between;
   align-items: center;
   font-size: 0.875rem;
-  padding-left: 4.375rem;
+  padding-left: 4rem;
   padding-right: 2.5rem;
   padding-top: 0.3125rem;
   padding-bottom: 1.875rem;
@@ -146,7 +150,6 @@
 .room-selection input {
   width: 4rem;
 }
-
 
 .booknow-form-button {
   font-family: 'Montserrat-bold';
@@ -173,4 +176,211 @@
   font-weight: bold;
   text-align: center;
   padding: 0.625rem;
+}
+
+.booknow-close-btn {
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+  border: none;
+  border-radius: 0.3125rem;
+  padding: 0.1rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.booknow-close-btn i {
+  font-size: 2rem;
+}
+
+.booknow-close-btn:hover {
+  scale: 1.1;
+}
+
+/* Responsive for 1024px and below */
+@media (max-width: 1024px) {
+  .booknow-popup-container {
+    width: 50%;
+    box-shadow: 0 0.25em 0.5rem rgba(0, 0, 0, 0.2);
+  }
+
+  .form-group,
+  .date-group,
+  .room-selection {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .price {
+    text-align: right;
+  }
+
+  .room-selection input {
+    text-align: left;
+    padding-right: 1rem;
+  }
+
+  .booknow-form-button {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  .booknow-popup-topic {
+    font-size: 1rem;
+  }
+
+  .booknow-content-description h1 {
+    font-size: 1.1rem;
+  }
+
+  .booknow-content-description p {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .booknow-popup-container {
+    width: 60%;
+  }
+}
+
+/* Responsive for tablets (768px and below) */
+@media (max-width: 768px) {
+  .booknow-popup-container {
+    width: 80%;
+    box-shadow: 0 0.25em 0.5rem rgba(0, 0, 0, 0.2);
+  }
+
+  .form-group,
+  .date-group,
+  .room-selection {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .price {
+    text-align: right;
+    padding-right: 1.5rem;
+  }
+
+  .room-selection input {
+    width: 3.5rem;
+  }
+
+  .booknow-form-button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .booknow-popup-topic {
+    font-size: 0.9rem;
+  }
+
+  .booknow-content-description h1 {
+    font-size: 1rem;
+  }
+
+  .booknow-content-description p {
+    font-size: 0.625rem;
+  }
+
+  .booknow-close-btn i {
+    font-size: 1.5rem;
+  }
+}
+
+/* Responsive for mobile (480px and below) */
+@media (max-width: 480px) {
+  .booknow-popup-container {
+    width: 80%;
+    box-shadow: 0 0.15em 0.3rem rgba(0, 0, 0, 0.2);
+  }
+
+  .form-group {
+    padding-left: 2rem;
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.25rem;
+  }
+
+  .form-group input {
+    width: 90%;
+  }
+
+  .room-selection {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .price {
+    display: none;
+  }
+
+  .room-selection input {
+    width: 100%;
+  }
+
+  .booknow-form-button {
+    font-size: 0.875rem;
+    padding: 0.5rem;
+  }
+
+  .booknow-popup-topic {
+    font-size: 0.85rem;
+  }
+
+  .booknow-content-description h1 {
+    font-size: 0.9rem;
+  }
+
+  .booknow-content-description p {
+    font-size: 0.5rem;
+  }
+
+  .booknow-close-btn i {
+    font-size: 1.75rem;
+  }
+
+  .date-group label,
+  .room-selection label {
+    font-size: 0.75rem;
+  }
+
+  .form-group label {
+    font-size: 0.75rem;
+  }
+
+  .date-group {
+    flex-direction: column;
+    gap: 0.25rem;
+    align-items: flex-start;
+    padding-left: 4rem;
+  }
+
+  .date-group div:nth-last-child(1) label {
+    padding-right: 3.2rem;
+  }
+
+  .date-group input {
+    justify-content: center;
+
+  }
+
+  .room-selection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0.5rem 2rem;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .room-type label {
+    margin-right: 1rem;
+  }
+
+
 }

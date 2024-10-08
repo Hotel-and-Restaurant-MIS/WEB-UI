@@ -161,20 +161,13 @@ export function BookNowPU({ isOpen, handleClose }) {
     }
   };
 
-  // Close the popup if the overlay is clicked
-  const handleOverlayClick = (e) => {
-    if (e.target === e.currentTarget) {
-      handleClose();
-    }
-  };
-
   // Return null if the popup is not open
   if (!isOpen) {
     return null;
   }
 
   return (
-    <div className='booknow-popup-overlay' onClick={handleOverlayClick}>
+    <div className='booknow-popup-overlay'>
       <div className="booknow-popup-container">
         {isReservationSuccessful ? (
           <div className='success-message'>
@@ -182,7 +175,10 @@ export function BookNowPU({ isOpen, handleClose }) {
           </div>
         ) : (
           <div>
-            <div className="booknow-popup-topic">Reserve NOW</div>
+            <div className="booknow-popup-topic">
+              <h1>RESERVE NOW</h1>
+              <span className='booknow-close-btn' onClick={handleClose}><i className='bx bx-x'></i></span>
+            </div>
             <form className='booknow-form' style={{ backgroundColor: '#F7F7F7' }} onSubmit={handleSubmit}>
               <div className='booknow-content-description'>
                 <h1>RESERVE THIS AMAZING HOTEL!</h1>
@@ -235,22 +231,26 @@ export function BookNowPU({ isOpen, handleClose }) {
                 </div>
               </div>
               <div className="date-group">
-                <label>From:</label>
-                <input
-                  name="fromDate"
-                  type="date"
-                  value={formData.fromDate}
-                  onChange={handleInputChange}
-                  required
-                />
-                <label style={{ paddingLeft: 40 }}>To</label>
-                <input
-                  name="toDate"
-                  type="date"
-                  value={formData.toDate}
-                  onChange={handleInputChange}
-                  required
-                />
+                <div>
+                  <label>From:</label>
+                  <input
+                    name="fromDate"
+                    type="date"
+                    value={formData.fromDate}
+                    onChange={handleInputChange}
+                    required
+                  />
+                </div>
+                <div>
+                  <label>To:</label>
+                  <input
+                    name="toDate"
+                    type="date"
+                    value={formData.toDate}
+                    onChange={handleInputChange}
+                    required
+                  />
+                </div>
               </div>
               <div className='price'>Price (LKR)</div>
               <div className="room-selection">
@@ -271,6 +271,7 @@ export function BookNowPU({ isOpen, handleClose }) {
                 </div>
                 <div>
                   <RoomCounter
+                    className='book-room-counter'
                     value={formData.roomQuantity}
                     roomCount={maxRoomCount}
                     onChange={handleRoomQuantityChange}

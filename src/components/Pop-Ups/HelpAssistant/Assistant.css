@@ -39,8 +39,13 @@
   background-color: #C4C4C4;
   border: none;
   border-radius: 0.3125rem;
-  padding: 0.3125rem;
+  padding: 0.1rem;
   cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.close-btn i {
+  font-size: 1.5rem;
 }
 
 .close-btn:hover {
