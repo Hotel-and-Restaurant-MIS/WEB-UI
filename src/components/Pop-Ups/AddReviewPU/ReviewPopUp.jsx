@@ -51,17 +51,17 @@ export function ReviewPopUp({ isOpen, handleClose }) {
       <div className="review-popup-content">
         <h1>Add Review</h1>
         <form className='review-popup-form' onSubmit={handleSubmit}>
-          <div>
+          <div className='review-popup'>
             <label>
               Your Name:
             </label>
-            <input type="text" name="name" required value={formData.name} onChange={handleInputChange} />
+            <input placeholder="Your Name" type="text" name="name" required value={formData.name} onChange={handleInputChange} />
           </div>
-          <div>
+          <div className='review-popup'>
             <label>
               Review:
             </label>
-            <input type="text" name="review" required value={formData.review} onChange={handleInputChange} />
+            <input placeholder="Your Review" type="text" name="review" required value={formData.review} onChange={handleInputChange} />
           </div>
           <div className='review-popup-button-container'>
             <button type="submit" className='review-submit-button'>Add Review</button>

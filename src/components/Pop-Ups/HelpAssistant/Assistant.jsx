@@ -7,13 +7,6 @@ export function Assistant({ isOpen, handleClose }) {
   const [userPrompt, setUserPrompt] = useState(''); // To store the current user input
   const conversationEndRef = useRef(null); // Reference for auto-scrolling
 
-  // Early return should be at the end of the functional component
-  const handleOverlayClick = (e) => {
-    if (e.target === e.currentTarget) {
-      handleClose();
-    }
-  };
-
   const handleInputChange = (e) => {
     setUserPrompt(e.target.value); // Update the user input
   };
@@ -88,10 +81,11 @@ export function Assistant({ isOpen, handleClose }) {
   if (!isOpen) return null;
 
   return (
-    <div className="assistant-overlay" onClick={handleOverlayClick}>
+    <div className="assistant-overlay" >
       <div className="assistant-content">
         <div className="assistant-name">
           <h2>LUXIE</h2>
+          <span className='close-btn' onClick={handleClose}><i class='bx bx-x'></i></span>
         </div>
 
         {/* Conversation history */}

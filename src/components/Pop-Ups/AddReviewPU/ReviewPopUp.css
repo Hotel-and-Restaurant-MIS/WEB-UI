@@ -10,7 +10,6 @@
   align-items: center;
 }
 
-
 .review-popup-content {
   background-color: white;
   padding: 0.3rem;
@@ -26,7 +25,6 @@
   padding-bottom: 0.625rem;
   justify-content: center;
   font-size: 1.25rem;
-
 }
 
 .review-popup-form {
@@ -53,7 +51,6 @@
   border: 1px solid black;
   font-size: 1em;
   width: 15rem;
-
 }
 
 .review-popup-button-container {
@@ -79,4 +76,61 @@
 .review-submit-button:hover {
   background-color: #A9A9A9;
   box-shadow: 0 0 0.5rem #A9A9A9;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+  .review-popup-content {
+    width: 25rem;
+  }
+
+  .review-popup-form {
+    padding-right: 2rem;
+    padding-left: 1rem;
+  }
+
+  .review-popup-form input {
+    width: 13rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .review-popup-content {
+    width: 25rem;
+  }
+
+  .review-popup-form {
+    padding-right: 1.5rem;
+    padding-left: 0.5rem;
+  }
+
+  .review-popup-form input {
+    width: 80%rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .review-popup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .review-popup-content {
+    width: 90%;
+  }
+
+  .review-popup-form {
+    padding-right: 2rem;
+    padding-left: 1rem;
+  }
+
+  .review-popup-form input {
+    width: 100%;
+  }
+
+  .review-popup-form label {
+    margin-right: 1rem;
+  }
 }
