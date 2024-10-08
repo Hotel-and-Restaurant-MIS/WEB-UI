@@ -1,12 +1,13 @@
 .footer-container {
   background-color: black;
   display: flex;
+  justify-content: space-around;
   color: white;
-  padding-left: 10%;
   padding-top: 1.875rem;
   padding-bottom: 2.25rem;
 }
 
+/* Base styles for footer name */
 .footer-name {
   display: flex;
   flex-direction: column;
@@ -23,7 +24,6 @@
   justify-content: center;
   font-family: 'AGaramondPro';
   letter-spacing: 0.15rem;
-
 }
 
 .footer-name-topic h1 {
@@ -38,11 +38,10 @@
   padding-bottom: 0.625rem;
 }
 
-
+/* Base styles for footer about section */
 .footer-about {
   display: flex;
   flex-direction: column;
-  padding-left: 20%;
   gap: 1rem;
 }
 
@@ -51,11 +50,11 @@
   margin: 0;
 }
 
+/* Base styles for footer contact section */
 .footer-contact {
   display: flex;
   flex-direction: column;
   font-weight: 700;
-  padding-left: 20%;
   gap: 1rem;
   font-size: 0.625rem;
 }
@@ -64,4 +63,21 @@
   height: 0.625rem;
   width: 0.625rem;
   padding-right: 1rem;
+}
+
+/* Mobile view */
+@media (max-width: 650px) {
+  .footer-container {
+    justify-content: center;
+  }
+
+  .footer-about {
+    display: none;
+
+  }
+
+  .footer-contact {
+    display: none;
+  }
+
 }

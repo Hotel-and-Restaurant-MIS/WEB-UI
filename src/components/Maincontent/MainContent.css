@@ -51,7 +51,7 @@
 .main-hero-tag-line {
   font-family: 'Montserrat';
   font-size: 1.25rem;
-  margin: 0 0.325rem;
+  margin: 0.1rem 0.325rem;
 }
 
 .main-hero-main-text {
@@ -87,6 +87,7 @@
   }
 
   .main-hero-tag-line {
+    text-align: left;
     font-size: 1rem;
   }
 

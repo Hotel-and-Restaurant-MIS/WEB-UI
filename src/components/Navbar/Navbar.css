@@ -160,7 +160,7 @@
   .nav-btn-cont {
     display: block;
     position: relative;
-    z-index: 1001;
+    z-index: 500;
     color: white;
   }
 }

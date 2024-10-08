@@ -40,6 +40,8 @@ export function Footer() {
           Instagram
         </div>
       </div>
+      <div className='empty'>
+      </div>
 
     </div>
   );
