@@ -1,12 +1,31 @@
 .navbar-main-cont {
-  padding: 0 10% 1% 12%;
+  padding: 0 0 1% 12%;
   display: flex;
-  justify-content: space-between;
+  justify-content: baseline;
+  align-items: center;
+  position: relative;
+  /* Ensure it's positioned properly for dropdown menus */
+}
+
+.nav-links {
+  display: flex;
+}
+
+.show-menu {
+  display: flex !important;
+  /* Make sure the menu displays when open */
+}
+
+.nav-link-btn {
+  display: none;
 }
 
 .nav-link-cont {
+  display: flex;
+  flex-direction: row;
   font-family: 'Montserrat';
-  padding: 2.5rem 0 0 0;
+  margin-top: 1.5rem;
+  margin-left: 20rem;
 }
 
 .nav-logo {
@@ -22,7 +41,7 @@
 .nav-logo h1 {
   color: black;
   font-size: 1.5rem;
-  font-style: bold;
+  font-weight: bold;
   margin: 0;
 }
 
@@ -30,9 +49,7 @@
   color: black;
   font-size: 0.8rem;
   margin: 0;
-
 }
-
 
 .nav-link {
   padding: 0 4.375rem 0 0.625rem;
@@ -47,5 +64,103 @@
   color: #fff;
   font-weight: bold;
   text-decoration: underline;
-  font-weight: bold;
+}
+
+/* Hamburger and Close icon */
+.nav-btn-cont {
+  display: none;
+  /* Hidden by default */
+  cursor: pointer;
+  font-size: 2rem;
+  color: white;
+}
+
+@media (max-width:1024px) {
+  .nav-link-cont {
+    margin-left: 5rem;
+  }
+}
+
+
+@media (max-width: 950px) {
+
+  .nav-link {
+    padding: 0 2rem 0 0.5rem;
+  }
+
+  .active-nav-link {
+    padding: 0 2rem 0 0.5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .nav-link-cont {
+    margin-left: 2rem;
+  }
+}
+
+
+/* Mobile Styles */
+@media (max-width: 650px) {
+  .navbar-main-cont {
+    padding: 0 2% 1% 2%;
+    justify-content: space-around;
+  }
+
+  .nav-logo {
+    padding: 1.4rem 0.8rem;
+  }
+
+  .nav-logo h1 {
+    font-size: 1.2rem;
+  }
+
+  .nav-logo h2 {
+    font-size: 0.6rem;
+  }
+
+  .nav-links {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+  }
+
+  .nav-link-cont {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.8);
+    flex-wrap: wrap;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    align-items: center;
+    padding-top: 10rem;
+    padding-bottom: 1rem;
+    gap: 1rem;
+  }
+
+  /* When the menu is opened, show it */
+  .show-menu {
+    display: flex;
+    opacity: 1;
+  }
+
+  .nav-link,
+  .active-nav-link {
+    padding: rem;
+    text-align: center;
+    width: 100%;
+    font-size: 1rem;
+    color: white;
+    margin: 0.5rem 1rem;
+  }
+
+  .nav-btn-cont {
+    display: block;
+    position: relative;
+    z-index: 1001;
+    color: white;
+  }
 }

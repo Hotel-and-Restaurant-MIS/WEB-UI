@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import "./Navbar.css";
 import "../../Fonts/Fonts.css";
 
-export function Navbar(props) {
+export function Navbar() {
+    const [isMenuOpen, setMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setMenuOpen(!isMenuOpen);
+    }
 
     return (
         <div className="navbar-main-cont">
@@ -13,29 +18,39 @@ export function Navbar(props) {
                 <h2>H O T E L S</h2>
             </div>
 
-            <div style={{ width: "1px" }}></div>
-            {/* The above div is used for spacing to align the navbar to the left */}
-
             {/* Navigation links */}
-            <nav className="nav-link-cont">
-                {/* Home link */}
-                <NavLink end to="/" className={({ isActive }) => (isActive ? 'active-nav-link' : 'nav-link')}>
-                    Home
-                </NavLink>
-                {/* Facilities link */}
-                <NavLink to="/facilities" className={({ isActive }) => (isActive ? 'active-nav-link' : 'nav-link')}>
-                    Facilities
-                </NavLink>
-                {/* Rooms link */}
-                <NavLink to="/rooms" className={({ isActive }) => (isActive ? 'active-nav-link' : 'nav-link')}>
-                    Rooms
-                </NavLink>
-                {/* Contact Us link */}
-                <NavLink to="/contactus" className={({ isActive }) => (isActive ? 'active-nav-link' : 'nav-link')}>
-                    Contact Us
-                </NavLink>
-                <box-icon name='menu'></box-icon>
-            </nav>
+            <div className={`nav-links ${isMenuOpen ? 'show-menu' : ''}`}>
+                <nav className="nav-link-cont">
+                    <div>
+                        <NavLink end to="/" className={({ isActive }) => (isActive ? 'active-nav-link' : 'nav-link')}>
+                            Home
+                        </NavLink>
+                    </div>
+                    <div>
+                        <NavLink to="/facilities" className={({ isActive }) => (isActive ? 'active-nav-link' : 'nav-link')}>
+                            Facilities
+                        </NavLink>
+                    </div>
+                    <div>
+                        <NavLink to="/rooms" className={({ isActive }) => (isActive ? 'active-nav-link' : 'nav-link')}>
+                            Rooms
+                        </NavLink>
+                    </div>
+                    <div>
+                        <NavLink to="/contactus" className={({ isActive }) => (isActive ? 'active-nav-link' : 'nav-link')}>
+                            Contact Us
+                        </NavLink>
+                    </div>
+                </nav>
+            </div>
+
+            {/* Hamburger/Close button */}
+            <div className="nav-btn-cont"
+                onClick={toggleMenu}
+                aria-expanded={isMenuOpen}
+                aria-label="Toggle navigation">
+                <i className={isMenuOpen ? 'bx bx-x' : 'bx bx-menu'}></i>
+            </div>
         </div>
-    )
+    );
 }
