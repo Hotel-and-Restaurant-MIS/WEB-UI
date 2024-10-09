@@ -51,7 +51,7 @@ const DirectionsMap = () => {
         }
       );
     }
-  }, [userLocation]);
+  }, [userLocation, center]);
 
   if (!isLoaded) {
     return <div>Loading...</div>; // Show a loading message until the map is loaded
