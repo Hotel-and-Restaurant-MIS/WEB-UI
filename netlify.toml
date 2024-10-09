@@ -1,4 +1,10 @@
 [[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+
+[[redirects]]
   from = "/review/*"
   to = "http://34.136.246.135/review/:splat"
   status = 200
@@ -33,3 +39,4 @@
   to = "http://34.136.246.135/rooms/:splat"
   status = 200
   force = true
+
