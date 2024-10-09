@@ -17,3 +17,19 @@
   transform: scale(1.025);
   box-shadow: 0 0 0.75rem 0.1rem #AFAFAF;
 }
+
+/* Tablet view */
+@media (max-width: 768px) {
+  .explore-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+  .explore-button {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+  }
+}

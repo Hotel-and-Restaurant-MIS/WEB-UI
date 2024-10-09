@@ -20,7 +20,4 @@ export const roomTypeService = axios.create({
   baseURL: "/roomtype"
 });
 
-export const roomService = axios.create({
-  baseURL: "/rooms"
-});
 

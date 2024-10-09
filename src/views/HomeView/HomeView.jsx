@@ -21,10 +21,10 @@ function HomeView() {
                 <div className='home-container'>
                     <div className='home-container-cont'>
                         <h1>Luxury redefined</h1>
-                        <p>Our rooms are designed to transport </p>
-                        <p>you into an environment made for leisure.</p>
-                        <p>Take your mind off the day-to-day of home </p>
-                        <p>life and find a private paradise for yourself.</p>
+                        <p>Our rooms are designed to transport
+                            you into an environment made for leisure.
+                            Take your mind off the day-to-day of home
+                            life and find a private paradise for yourself.</p>
                         <Explore />
                     </div>
                     <div className='home-container-img'>
@@ -36,11 +36,11 @@ function HomeView() {
                         <h2>Leave your worries in </h2>
                         <h2>the sand</h2>
                         <br />
-                        <p>We love life at the beach. Being close</p>
-                        <p>to the ocean with access to endless sandy</p>
-                        <p>beach ensures a relaxed state of mind. It </p>
-                        <p>seems like time stands still watching the</p>
-                        <p>ocean. </p>
+                        <p>We love life at the beach. Being close
+                            to the ocean with access to endless sandy
+                            beach ensures a relaxed state of mind. It
+                            seems like time stands still watching the
+                            ocean. </p>
                         <Explore />
                     </div>
                     <div className='home-container-img'>

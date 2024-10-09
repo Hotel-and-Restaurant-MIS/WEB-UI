@@ -25,8 +25,32 @@
 }
 
 .assistant-name {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
   border-bottom: 1px solid black;
   text-align: center;
+}
+
+.close-btn {
+  position: absolute;
+  right: 0.625rem;
+  background-color: #C4C4C4;
+  border: none;
+  border-radius: 0.3125rem;
+  padding: 0.1rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.close-btn i {
+  font-size: 1.5rem;
+}
+
+.close-btn:hover {
+  background-color: #AFAFAF;
+  box-shadow: 0 0 0.5rem #AFAFAF;
 }
 
 .assistant-name h2 {
@@ -41,10 +65,8 @@
   margin-bottom: 1.25rem;
   display: flex;
   flex-direction: column;
-  /* Stack messages vertically */
   padding: 0 0.625rem;
   padding-top: 1.25rem;
-
 }
 
 .user-message {
@@ -54,62 +76,37 @@
   margin: 0.3125rem;
   color: white;
   align-self: flex-end;
-  /* Align user messages to the right */
-  /* border: 0.05rem solid black; */
   background-color: rgb(56, 77, 158);
   word-wrap: break-word;
-  /* Allow long words to break and wrap onto the next line */
   opacity: 0;
-  /* Start invisible */
   transform: translateX(1.25rem);
-  /* Start slightly lower */
   animation: fadeInLeft 0.7s ease forwards;
-  /* Animation for fade-in and move up */
 }
 
 @keyframes fadeInLeft {
   to {
     opacity: 1;
-    /* Fully visible */
     transform: translateX(0);
-    /* Move to original position */
   }
 }
 
 .ai-message {
   max-width: 22rem;
   background-color: white;
-  padding: 1rem;
+  padding: 0 1rem;
   border-radius: 3.125rem;
   margin: 0.3125rem;
   align-self: flex-start;
   opacity: 0;
-  /* Start invisible */
   transform: translateX(-1.25rem);
-  /* Start slightly lower */
   animation: fadeInLeft 0.7s ease forwards;
-  /* Animation for fade-in and move up */
 }
-
-/* Define the keyframes for the fade-Left and move-up animation */
-@keyframes fadeInLeft {
-  to {
-    opacity: 1;
-    /* Fully visible */
-    transform: translateX(0);
-    /* Move to original position */
-  }
-}
-
 
 .assistant-input {
   display: flex;
   justify-content: flex-end;
-  /* Align items to the end (right side) */
   align-items: center;
-  /* Center items vertically (optional) */
   margin-top: 1rem;
-  /* Optional: adds spacing above */
 }
 
 .assistant-input input {
@@ -134,4 +131,35 @@
 .assistant-input button:hover {
   background-color: #E0B973;
   box-shadow: 0 0 0.5rem #E0B973;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .assistant-content {
+    width: 30rem;
+    height: 24rem;
+  }
+
+  .user-message,
+  .ai-message {
+    max-width: 18rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .assistant-content {
+    width: 20rem;
+    height: 18rem;
+  }
+
+  .user-message,
+  .ai-message {
+    max-width: 14rem;
+  }
+
+  .assistant-input input,
+  .assistant-input button {
+    margin: 0.3125rem;
+    padding: 0.3125rem 0.625rem;
+  }
 }

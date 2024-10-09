@@ -1,13 +1,12 @@
 .massenger-icon {
   position: fixed;
-  bottom: 1.875rem;
+  bottom: 3rem;
   right: 2.5rem;
   z-index: 1000;
   /* Ensure it stays on top of other elements */
 }
 
 .massenger-icon img {
-
   width: 3.75rem;
   height: 3.75rem;
   cursor: pointer;
@@ -16,7 +15,6 @@
   /* Slower */
   transition: transform 0.5s, filter 0.5s;
   /* Transition for transform and filter */
-
 }
 
 @keyframes float {
@@ -38,4 +36,30 @@
   transform: scale(1.1);
   filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.3));
   /* Stronger shadow on hover */
+}
+
+/* Tablet view */
+@media (max-width: 768px) {
+  .massenger-icon {
+    bottom: 2rem;
+    right: 2rem;
+  }
+
+  .massenger-icon img {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+  .massenger-icon {
+    bottom: 3rem;
+    right: 1.5rem;
+  }
+
+  .massenger-icon img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }

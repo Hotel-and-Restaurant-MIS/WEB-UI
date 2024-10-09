@@ -10,7 +10,6 @@
   align-items: center;
 }
 
-
 .review-popup-content {
   background-color: white;
   padding: 0.3rem;
@@ -20,13 +19,20 @@
   width: 30rem;
 }
 
+.review-popup-name {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 .review-popup-content h1 {
   font-family: 'Montserrat-bold';
   display: flex;
   padding-bottom: 0.625rem;
   justify-content: center;
   font-size: 1.25rem;
-
 }
 
 .review-popup-form {
@@ -53,7 +59,6 @@
   border: 1px solid black;
   font-size: 1em;
   width: 15rem;
-
 }
 
 .review-popup-button-container {
@@ -79,4 +84,82 @@
 .review-submit-button:hover {
   background-color: #A9A9A9;
   box-shadow: 0 0 0.5rem #A9A9A9;
+}
+
+.review-close-btn {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  background-color: #C4C4C4;
+  border: none;
+  border-radius: 0.3125rem;
+  padding: 0.1rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.review-close-btn i {
+  font-size: 1.5rem;
+}
+
+.review-close-btn:hover {
+  background-color: #AFAFAF;
+  box-shadow: 0 0 0.5rem #AFAFAF;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+  .review-popup-content {
+    width: 25rem;
+  }
+
+  .review-popup-form {
+    padding-right: 2rem;
+    padding-left: 1rem;
+  }
+
+  .review-popup-form input {
+    width: 13rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .review-popup-content {
+    width: 25rem;
+  }
+
+  .review-popup-form {
+    padding-right: 1.5rem;
+    padding-left: 0.5rem;
+  }
+
+  .review-popup-form input {
+    width: 80%rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .review-popup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .review-popup-content {
+    width: 90%;
+  }
+
+  .review-popup-form {
+    padding-right: 2rem;
+    padding-left: 1rem;
+  }
+
+  .review-popup-form input {
+    width: 100%;
+  }
+
+  .review-popup-form label {
+    margin-right: 1rem;
+  }
 }

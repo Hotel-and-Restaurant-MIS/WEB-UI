@@ -8,3 +8,12 @@ html {
   overflow-x: hidden;
   /* overflow-y: hidden; */
 }
+
+@media (max-width: 768px) {
+
+  body,
+  html {
+    width: 100%;
+    overflow-x: hidden;
+  }
+}

@@ -31,6 +31,7 @@
   bottom: 1rem;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 1;
 }
 
 .main-hero-sub-text {
@@ -50,7 +51,7 @@
 .main-hero-tag-line {
   font-family: 'Montserrat';
   font-size: 1.25rem;
-  margin: 0 0.325rem;
+  margin: 0.1rem 0.325rem;
 }
 
 .main-hero-main-text {
@@ -73,8 +74,60 @@
 .main-hero-scroll-down-icon {
   height: 3.25rem;
   fill: white;
-
 }
+
+@media (max-width: 768px) {
+  .main-hero-sub-text {
+    font-size: 2rem;
+  }
+
+  .main-hero-sub-text2 {
+    font-size: 2rem;
+  }
+
+  .main-hero-tag-line {
+    font-size: 1.125rem;
+  }
+
+  .main-hero-main-text {
+    font-size: 4.5rem;
+  }
+
+  .main-hero-scroll-text {
+    font-size: 0.95rem;
+  }
+
+  .hero-book-now {
+    margin-bottom: 12rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .main-hero-sub-text {
+    font-size: 2.1rem;
+  }
+
+  .main-hero-sub-text2 {
+    font-size: 2.1rem;
+  }
+
+  .main-hero-tag-line {
+    font-size: 1.2rem;
+  }
+
+  .main-hero-main-text {
+    font-size: 5rem;
+  }
+
+  .main-hero-scroll-text {
+    font-size: 1rem;
+  }
+
+  .hero-book-now {
+    margin-bottom: 13rem;
+  }
+}
+
 
 @media (max-width: 450px) {
   .main-hero-sub-text {
@@ -86,6 +139,7 @@
   }
 
   .main-hero-tag-line {
+    text-align: left;
     font-size: 1rem;
   }
 
@@ -99,5 +153,9 @@
 
   .hero-book-now {
     margin-bottom: 10rem;
+  }
+
+  .main-hero-scroll-down-icon {
+    height: 3rem;
   }
 }
