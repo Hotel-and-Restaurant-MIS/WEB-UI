@@ -1,7 +1,7 @@
 .massenger-icon {
   position: fixed;
   bottom: 3rem;
-  right: 2.5rem;
+  right: 3rem;
   z-index: 1000;
   /* Ensure it stays on top of other elements */
 }

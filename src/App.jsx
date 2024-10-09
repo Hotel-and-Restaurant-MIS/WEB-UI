@@ -11,7 +11,7 @@ import FacilitiesView from './views/FacilitiesView/FacilitiesView.jsx';
 import RoomsView from './views/RoomsView/RoomsView.jsx';
 import ContactView from './views/ContactView/ContactView.jsx';
 import "./Fonts/Fonts.css";
-import Map from './components/Map/Map.jsx';
+import MainMap from './components/Map/MainMap.jsx';
 
 function App() {
     return (
@@ -21,7 +21,7 @@ function App() {
                 <Route path="/facilities" element={<FacilitiesView />} />
                 <Route path="/rooms" element={<RoomsView />} />
                 <Route path="/contactus" element={<ContactView />} />
-                <Route path="/contactus/map" element={<Map />} />
+                <Route path="/contactus/map" element={<MainMap />} />
             </Routes>
         </Router>
     );

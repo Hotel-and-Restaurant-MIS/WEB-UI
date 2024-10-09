@@ -39,29 +39,31 @@ function RoomsView() {
             <section>
                 <div className='rooms-cont'>
                     <h1>ROOMS AND RATES</h1>
-                    <p>Each of our bright, light-flooded rooms come with everything you could possibly need for a comfortable stay. And yes, </p>
-                    <p>comfort isn’t our only objective, we also value good design, sleek contemporary furnishing complemented </p>
-                    <p>by the rich tones of nature’s palette as visible from our rooms’ sea-view windows and terraces. </p>
+                    <p>Each of our bright, light-flooded rooms come with everything you could possibly need for a comfortable stay. And yes,
+                        comfort isn’t our only objective, we also value good design, sleek contemporary furnishing complemented
+                        by the rich tones of nature’s palette as visible from our rooms’ sea-view windows and terraces. </p>
                 </div>
 
-                {rooms.map(room => (
-                    <RoomType
-                        key={room.roomTypeName}  // Ensure your data has an id or unique identifier
-                        src={room.roomTypeName === 'SINGLE ROOM' ? SingleBedImage :
-                            room.name === 'DOUBLE ROOM' ? DoubleBedImage :
-                                TwinBedImage} // Map image based on room type name
-                        alt={room.roomTypeName}
-                        name={room.roomTypeName}
-                        price={`LKR ${room.pricePerDay}.00 Avg/Night`}
-                    />
-                ))}
+                {
+                    rooms.map(room => (
+                        <RoomType
+                            key={room.roomTypeName}  // Ensure your data has an id or unique identifier
+                            src={room.roomTypeName === 'SINGLE ROOM' ? SingleBedImage :
+                                room.name === 'DOUBLE ROOM' ? DoubleBedImage :
+                                    TwinBedImage} // Map image based on room type name
+                            alt={room.roomTypeName}
+                            name={room.roomTypeName}
+                            price={`LKR ${room.pricePerDay}.00 Avg/Night`}
+                        />
+                    ))
+                }
                 <Review />
                 {/* <NavArrow /> */}
                 <AddReview />
-            </section>
+            </section >
             <MassengerIcon />
             <Footer />
-        </div>
+        </div >
     );
 }
 
