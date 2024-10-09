@@ -4,14 +4,13 @@ import { MainContent } from '../../components/Maincontent/MainContent.jsx';
 import { MassengerIcon } from '../../components/Massenger/Massenger.jsx';
 import { Review } from '../../components/Review/Review.jsx';
 import { AddReview } from '../../components/Buttons/AddReview/AddReview.jsx';
-// import { NavArrow } from '../../components/NavArrow/NavArrow.jsx';
 import { RoomType } from '../../components/Rooms/RoomType.jsx';
 import SingleBedImage from '../../images/RoomImages/singlebed.png';
 import DoubleBedImage from '../../images/RoomImages/doublebed.png';
 import TwinBedImage from '../../images/RoomImages/twinbed.png';
 import { Footer } from '../../components/Footer/Footer.jsx';
 import "../../Fonts/Fonts.css";
-import { urlInstance } from '../../constants.js';
+import { reservationService } from '../../constants.js';
 
 function RoomsView() {
     const [rooms, setRooms] = useState([]);
@@ -20,7 +19,7 @@ function RoomsView() {
         // Fetch room types and prices
         const fetchRooms = async () => {
             try {
-                const response = await urlInstance.get("/roomtype/price");
+                const response = await reservationService.get("/roomtype/price");
                 setRooms(response.data);
             } catch (error) {
                 console.error('Error fetching room data:', error);

@@ -1,6 +1,35 @@
 [[redirects]]
-  from = "/api/*"
-  to = "http://34.136.246.135/:splat"  # Your backend API (still HTTP)
+  from = "/review/*"
+  to = "http://34.136.246.135/review/:splat"
   status = 200
   force = true
-  headers = { "Access-Control-Allow-Methods" = "GET, POST, PUT, DELETE, OPTIONS" }
+
+[[redirects]]
+  from = "/reservations/*"
+  to = "http://34.136.246.135/reservations/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/bookings/*"
+  to = "http://34.136.246.135/bookings/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/customer/*"
+  to = "http://34.136.246.135/customer/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/roomtype/*"
+  to = "http://34.136.246.135/roomtype/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/rooms/*"
+  to = "http://34.136.246.135/rooms/:splat"
+  status = 200
+  force = true

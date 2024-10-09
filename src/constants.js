@@ -1,13 +1,26 @@
 import axios from 'axios';
 
-export const urlInstance = axios.create({
+export const reviewService = axios.create({
+  baseURL: "/review"
+});
 
-  // baseURL: "http://34.136.246.135"
+export const reservationService = axios.create({
+  baseURL: "/reservations"
+});
 
-  baseURL: "/api",
-  headers: {
-    'Content-Type': 'application/json',  // Ensure correct content type for POST
-    'Accept': 'application/json',
-  }
+export const bookingService = axios.create({
+  baseURL: "/bookings"
+});
+
+export const customerService = axios.create({
+  baseURL: "/customer"
+});
+
+export const roomTypeService = axios.create({
+  baseURL: "/roomtype"
+});
+
+export const roomService = axios.create({
+  baseURL: "/rooms"
 });
 
