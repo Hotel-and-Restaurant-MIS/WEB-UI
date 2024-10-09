@@ -8,6 +8,7 @@ const center = {
   lng: 79.8737, // Longitude for hotel
 };
 
+
 const DirectionsMap = () => {
 
   const [userLocation, setUserLocation] = useState(null);

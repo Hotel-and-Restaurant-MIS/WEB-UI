@@ -158,4 +158,8 @@
   .main-hero-scroll-down-icon {
     height: 3rem;
   }
+
+  .scroll-container {
+    display: none;
+  }
 }

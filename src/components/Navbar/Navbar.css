@@ -25,8 +25,7 @@
   flex-direction: row;
   font-family: 'Montserrat';
   font-size: 1rem;
-  margin-top: 1.5rem;
-  margin-left: 20rem;
+  margin-left: 30rem;
 }
 
 .nav-logo {
@@ -106,6 +105,7 @@
   .navbar-main-cont {
     padding: 0 2% 1% 2%;
     justify-content: space-around;
+    gap: 10rem;
   }
 
   .nav-logo {
