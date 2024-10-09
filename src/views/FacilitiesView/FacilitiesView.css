@@ -24,6 +24,38 @@
 }
 
 .facilities-cont p {
+  font-size: 1.2rem;
   font-weight: 600;
+  flex-wrap: wrap;
+  margin: 0 10rem;
+  line-height: 1.5;
+}
 
+/* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+  .facilities-cont p {
+    margin: 0 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .facilities-cont h1 {
+    font-size: 1.5rem;
+  }
+
+  .facilities-cont p {
+    font-size: 1rem;
+    margin: 0 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .facilities-cont h1 {
+    font-size: 1.25rem;
+  }
+
+  .facilities-cont p {
+    font-size: 0.875rem;
+    margin: 0 2rem;
+  }
 }

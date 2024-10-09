@@ -23,9 +23,9 @@ function FacilitiesView() {
             <section>
                 <div className='facilities-cont'>
                     <h1>FACILITIES</h1>
-                    <p>We want your stay at our lush hotel to be truly unforgettable.  That is why we give special attention to all of your needs so </p>
-                    <p>that we can ensure an experience quite uniquw. Luxury hotels offers the perfect setting with stunning views for leisure</p>
-                    <p>and our modern luxury resort facilities will help you enjoy the best of all. </p>
+                    <p>We want your stay at our lush hotel to be truly unforgettable.  That is why we give special attention to all of your needs so
+                        that we can ensure an experience quite uniquw. Luxury hotels offers the perfect setting with stunning views for leisure
+                        and our modern luxury resort facilities will help you enjoy the best of all. </p>
                 </div>
                 <Locations src={GymImage} alt="Gym Image" name="THE GYM" />
                 <Locations src={PoolsidebarImage} alt="Bar Image" name="POOLSIDE BAR" />
