@@ -49,7 +49,7 @@ function RoomsView() {
                         <RoomType
                             key={room.roomTypeName}  // Ensure your data has an id or unique identifier
                             src={room.roomTypeName === 'SINGLE ROOM' ? SingleBedImage :
-                                room.name === 'DOUBLE ROOM' ? DoubleBedImage :
+                                room.roomTypeName === 'DOUBLE ROOM' ? DoubleBedImage :
                                     TwinBedImage} // Map image based on room type name
                             alt={room.roomTypeName}
                             name={room.roomTypeName}
