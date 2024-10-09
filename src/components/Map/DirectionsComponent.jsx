@@ -2,11 +2,13 @@ import React, { useEffect, useState } from "react";
 import { useJsApiLoader, GoogleMap, Marker, DirectionsRenderer } from "@react-google-maps/api";
 import markerIcon from '../../images/hotelicon.png'; // Adjust the path to your image
 
+const center = {
+  lat: 6.9, // Latitude for hotel
+  lng: 79.8737, // Longitude for hotel
+};
+
+
 const DirectionsMap = () => {
-  const center = {
-    lat: 6.9, // Latitude for hotel
-    lng: 79.8737, // Longitude for hotel
-  };
 
   const [userLocation, setUserLocation] = useState(null);
   const [directions, setDirections] = useState(null);
