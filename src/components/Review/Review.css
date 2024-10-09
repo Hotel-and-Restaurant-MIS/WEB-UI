@@ -1,5 +1,5 @@
 .reviews-container {
-  padding-bottom: 1.5rem;
+  margin: 1.5rem;
   text-align: center;
 }
 
@@ -20,5 +20,47 @@
   font-size: 1rem;
   font-weight: 550;
   margin-top: 0.625rem;
+}
 
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .reviews-container h1 {
+    font-size: 1.75rem;
+  }
+
+  .reviews-container p {
+    font-size: 0.9em;
+  }
+
+  .reviews-container h2 {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .reviews-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .reviews-container p {
+    font-size: 0.85em;
+  }
+
+  .reviews-container h2 {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .reviews-container h1 {
+    font-size: 1.25rem;
+  }
+
+  .reviews-container p {
+    font-size: 0.8em;
+  }
+
+  .reviews-container h2 {
+    font-size: 0.8rem;
+  }
 }

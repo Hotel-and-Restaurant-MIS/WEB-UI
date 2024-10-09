@@ -25,5 +25,37 @@
 
 .rooms-cont p {
   font-weight: 600;
+  text-wrap: wrap;
+  line-height: 1.5;
+  font-size: 1.2rem;
+  margin: 0 10rem;
+}
 
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .rooms-cont p {
+    margin: 0 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .rooms-cont p {
+    margin: 0 2rem;
+    font-size: 1rem;
+  }
+
+  .rooms-cont h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .rooms-cont p {
+    margin: 0 1rem;
+    font-size: 0.875rem;
+  }
+
+  .rooms-cont h1 {
+    font-size: 1.25rem;
+  }
 }

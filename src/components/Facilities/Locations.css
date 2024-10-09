@@ -16,6 +16,10 @@
   font-weight: bold;
   padding: 1.25rem;
   background-color: #1E1E1E;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .background-image {
@@ -26,37 +30,46 @@
   z-index: -1;
 }
 
+/* Media query for tablet screens */
 @media (max-width: 1024px) {
   .image-container {
     margin: 5% 5%;
+    height: 50vh;
   }
 
   .text-overlay {
     font-size: 1.5rem;
-    width: 18rem;
+    width: 15rem;
+    padding: 1rem;
   }
 }
 
+/* Media query for mobile screens */
 @media (max-width: 768px) {
   .image-container {
-    margin: 5% 2%;
+    margin: 5% 4%;
+    height: 50vh;
     flex-direction: column;
   }
 
   .text-overlay {
     font-size: 1.25rem;
-    width: 100%;
-    padding: 1rem;
+    width: 12rem;
+    padding: 0.75rem;
   }
 }
 
+/* Media query for smaller mobile screens */
 @media (max-width: 480px) {
   .image-container {
-    margin: 5% 1%;
+    margin: 5% 4.5%;
+    height: 35vh;
+    flex-direction: column;
   }
 
   .text-overlay {
     font-size: 1rem;
-    padding: 0.75rem;
+    width: 10rem;
+    padding: 0.5rem;
   }
 }

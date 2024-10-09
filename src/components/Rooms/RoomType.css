@@ -11,16 +11,14 @@
   justify-content: center;
   align-items: center;
   height: 75vh;
-  margin: 0%
+  margin: 0%;
 }
 
 .room-background-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* 'cover' usually works better than 'contained' for background images */
 }
-
 
 .room-cont {
   display: flex;
@@ -35,7 +33,6 @@
   font-family: 'Montserrat-bold';
   font-size: 2rem;
   color: white;
-  padding-bottom: 0.75rem;
 }
 
 .room-price-container {
@@ -46,5 +43,66 @@
   width: 15rem;
   padding: 0.625rem;
   border-radius: 0.625rem;
+}
 
+/* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+  .room-type-container {
+    margin-left: 4%;
+    margin-right: 4%;
+    padding: 2rem;
+  }
+
+  .room-image-container {
+    height: 40vh;
+  }
+
+  .room-cont h1 {
+    font-size: 1.75rem;
+  }
+
+  .room-price-container {
+    width: 15rem;
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .room-type-container {
+    margin-left: 3%;
+    margin-right: 3%;
+    padding: 1.5rem;
+  }
+
+  .room-cont h1 {
+    font-size: 1.5rem;
+  }
+
+  .room-price-container {
+    width: 10rem;
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .room-type-container {
+    margin-left: 2%;
+    margin-right: 2%;
+    padding: 1rem;
+  }
+
+
+  .room-image-container {
+    height: 30vh;
+  }
+
+  .room-cont h1 {
+    font-size: 1.25rem;
+  }
+
+  .room-price-container {
+    font-size: 0.9rem;
+    width: 8rem;
+    padding: 0.5rem;
+  }
 }

@@ -15,7 +15,7 @@ function ContactView() {
     }
 
     return (
-        <div>
+        <div className='contact-container'>
             <div className="contact-main-cont">
                 <Navbar />
             </div>
@@ -28,9 +28,9 @@ function ContactView() {
             <div className='contact-content'>
                 <div className='contact-content-details'>
                     <div>Colombo, Sri Lanka</div>
-                    <div style={{ fontFamily: 'Montserrat-bold' }}>
-                        <span onClick={navigateToMap} style={{ cursor: 'pointer' }}>
-                            View Map
+                    <div className="location-navigate-name" onClick={navigateToMap}>
+                        <span >
+                            Locate Us Here
                         </span>
                         <img src={require('../../images/arrow.png')} alt="arrow" style={{ height: 10, paddingLeft: 20, width: 30 }} />
                     </div>
@@ -39,7 +39,11 @@ function ContactView() {
                 </div>
                 <MassengerIcon />
             </div>
-            <Footer />
+            <div className='empty-space'></div>
+            <div>
+                <Footer />
+            </div>
+
         </div>
     );
 }

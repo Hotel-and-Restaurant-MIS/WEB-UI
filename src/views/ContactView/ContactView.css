@@ -1,3 +1,14 @@
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.empty-space {
+  flex-grow: 1;
+  background-color: #F7F7F7;
+}
+
 .contact-main-cont {
   background-color: black;
 }
@@ -12,6 +23,21 @@
   font-weight: bold;
   padding-top: 0.625rem;
   padding-bottom: 3.75rem;
+}
+
+.location-navigate-name {
+  font-family: 'Montserrat-bold';
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.location-navigate-name:hover {
+  cursor: pointer;
 }
 
 .contact-content-description {
@@ -29,6 +55,7 @@
 .contact-content-description p {
   margin-bottom: 0.3125rem;
   margin-top: 0.3125rem;
+  line-height: 1.5;
 }
 
 .contact-content {
@@ -45,4 +72,47 @@
   flex-direction: column;
   font-weight: 600;
   gap: 1.875rem;
+}
+
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+
+  .contact-content-description,
+  .contact-content {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .contact-content-description,
+  .contact-content {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .contact-name {
+    font-size: 1.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .contact-content-description {
+    padding-top: 2rem;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .contact-content {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .contact-name {
+    font-size: 1.5rem;
+  }
 }

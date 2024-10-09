@@ -81,6 +81,7 @@
   opacity: 0;
   transform: translateX(1.25rem);
   animation: fadeInLeft 0.7s ease forwards;
+  text-wrap: wrap;
 }
 
 @keyframes fadeInLeft {
@@ -100,6 +101,7 @@
   opacity: 0;
   transform: translateX(-1.25rem);
   animation: fadeInLeft 0.7s ease forwards;
+  text-wrap: wrap;
 }
 
 .assistant-input {

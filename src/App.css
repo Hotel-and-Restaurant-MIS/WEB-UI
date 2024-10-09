@@ -3,13 +3,13 @@ html {
   margin: 0;
   padding: 0;
   height: 100%;
-  width: 101%;
+  width: 100%;
   font-family: 'Montserrat';
   overflow-x: hidden;
   /* overflow-y: hidden; */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
 
   body,
   html {
