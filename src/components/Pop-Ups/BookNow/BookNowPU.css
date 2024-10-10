@@ -172,6 +172,7 @@
 
 .success-message {
   margin-top: 0.625rem;
+  background-color: #F7F7F7;
   color: black;
   font-weight: bold;
   text-align: center;

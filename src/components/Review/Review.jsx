@@ -15,7 +15,7 @@ export function Review() {
   useEffect(() => {
     async function fetchReviews() {
       try {
-        const response = await reviewService.get("/approved");
+        const response = await reviewService.get("/all"); // Fetch all reviews
         updateReviews(response.data); // Update state with fetched reviews
       } catch (e) {
         console.error("Error fetching reviews:", e); // Handle any errors during fetch

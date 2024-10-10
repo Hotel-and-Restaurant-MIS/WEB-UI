@@ -44,6 +44,16 @@ export function BookNowPU({ isOpen, handleClose }) {
     });
   };
 
+
+  const handleDateChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+    handleRoomType(e);
+  };
+
   // Update the room price based on the selected room type
   useEffect(() => {
     const fetchRoomPrice = async () => {
@@ -69,21 +79,32 @@ export function BookNowPU({ isOpen, handleClose }) {
   const handleRoomType = async (e) => {
     const selectedRoomType = e.target.value;
 
+    // Update room type and reset room quantity
     setFormData((prevData) => ({
       ...prevData,
       roomType: selectedRoomType,
       roomQuantity: '1', // Reset room quantity to 1 when the room type changes
     }));
 
-    try {
-      const response = await bookingService.get(`/totalAvailableRoomCount?from=${formData.fromDate}&to=${formData.toDate}`);
-      const roomTypeData = response.data.find(record => record.roomTypeName === selectedRoomType);
-      if (roomTypeData) {
-        setMaxRoomCount(roomTypeData.availableCount);
+    // Check if fromDate, toDate, and roomType exist before making the API call
+    if (formData.fromDate && formData.toDate && selectedRoomType) {
+      try {
+        // Fetch available room count based on the selected room type and dates
+        const response = await bookingService.get(`/totalAvailableRoomCount?from=${formData.fromDate}&to=${formData.toDate}`);
+        const roomTypeData = response.data.find(record => record.roomTypeName === selectedRoomType);
+
+        // If data for the selected room type is found, update the max room count
+        if (roomTypeData) {
+          setMaxRoomCount(roomTypeData.availableCount);
+        }
+
+        console.log(roomTypeData); // Debugging: Log the room type data
+
+      } catch (e) {
+        console.error(e); // Handle any errors from the API request
       }
-      console.log(roomTypeData);
-    } catch (e) {
-      console.error(e);
+    } else {
+      console.log('Please select valid dates and room type'); // Log a message if any required fields are missing
     }
   };
 
@@ -238,7 +259,7 @@ export function BookNowPU({ isOpen, handleClose }) {
                     name="fromDate"
                     type="date"
                     value={formData.fromDate}
-                    onChange={handleInputChange}
+                    onChange={handleDateChange}
                     required
                   />
                 </div>
@@ -248,7 +269,7 @@ export function BookNowPU({ isOpen, handleClose }) {
                     name="toDate"
                     type="date"
                     value={formData.toDate}
-                    onChange={handleInputChange}
+                    onChange={handleDateChange}
                     required
                   />
                 </div>
