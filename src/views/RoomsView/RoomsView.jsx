@@ -10,7 +10,7 @@ import DoubleBedImage from '../../images/RoomImages/doublebed.png';
 import TwinBedImage from '../../images/RoomImages/twinbed.png';
 import { Footer } from '../../components/Footer/Footer.jsx';
 import "../../Fonts/Fonts.css";
-import { roomTypeService } from '../../constants.js';
+import { urlInstanse } from '../../constants.js';
 
 function RoomsView() {
     const [rooms, setRooms] = useState([]);
@@ -19,7 +19,7 @@ function RoomsView() {
         // Fetch room types and prices
         const fetchRooms = async () => {
             try {
-                const response = await roomTypeService.get("/price");
+                const response = await urlInstanse.get("/roomtype/price");
                 setRooms(response.data);
             } catch (error) {
                 console.error('Error fetching room data:', error);

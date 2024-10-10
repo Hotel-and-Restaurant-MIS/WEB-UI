@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './BookNowPU.css';
 import "../../../Fonts/Fonts.css";
 import { RoomCounter } from '../../../components/Counter/RoomCount.jsx';
-import { bookingService, reservationService, roomTypeService } from "../../../constants.js";
-import { customerService } from '../../../constants.js';
+import { urlInstanse } from '../../../constants.js';
 
 
 export function BookNowPU({ isOpen, handleClose }) {
@@ -58,7 +57,7 @@ export function BookNowPU({ isOpen, handleClose }) {
   useEffect(() => {
     const fetchRoomPrice = async () => {
       try {
-        const response = await roomTypeService.get("/price");
+        const response = await urlInstanse.get("/roomtype/price");
         const roomTypeData = response.data.find(record => record.roomTypeName === formData.roomType);
         if (roomTypeData) {
           setRoomPrice(roomTypeData.pricePerDay);
@@ -90,7 +89,7 @@ export function BookNowPU({ isOpen, handleClose }) {
     if (formData.fromDate && formData.toDate && selectedRoomType) {
       try {
         // Fetch available room count based on the selected room type and dates
-        const response = await bookingService.get(`/totalAvailableRoomCount?from=${formData.fromDate}&to=${formData.toDate}`);
+        const response = await urlInstanse.get(`/bookings/totalAvailableRoomCount?from=${formData.fromDate}&to=${formData.toDate}`);
         const roomTypeData = response.data.find(record => record.roomTypeName === selectedRoomType);
 
         // If data for the selected room type is found, update the max room count
@@ -142,7 +141,7 @@ export function BookNowPU({ isOpen, handleClose }) {
       console.log(formData); // Log form data for debugging
 
       // Send form data to the server
-      const customerResponse = await customerService.post("/add", {
+      const customerResponse = await urlInstanse.post("/customer/add", {
         name: formData.name,
         email: formData.email,
         nic: formData.nic,
@@ -151,7 +150,7 @@ export function BookNowPU({ isOpen, handleClose }) {
       console.log("Success");
       const customerId = customerResponse.data.customerId;
 
-      await reservationService.post("/add", {
+      await urlInstanse.post("/reservations/add", {
         customerId: customerId,
         checkinDate: formData.fromDate,
         checkoutDate: formData.toDate,

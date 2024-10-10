@@ -1,23 +1,5 @@
 import axios from 'axios';
 
-export const reviewService = axios.create({
-  baseURL: "/review"
+export const urlInstanse = axios.create({
+  baseURL: "http://34.136.246.135"
 });
-
-export const reservationService = axios.create({
-  baseURL: "/reservations"
-});
-
-export const bookingService = axios.create({
-  baseURL: "/bookings"
-});
-
-export const customerService = axios.create({
-  baseURL: "/customer"
-});
-
-export const roomTypeService = axios.create({
-  baseURL: "/roomtype"
-});
-
-

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "./Review.css";
 import "../../Fonts/Fonts.css";
-import { reviewService } from '../../constants';
+import { urlInstanse } from '../../constants';
 
 export function Review() {
 
@@ -15,7 +15,7 @@ export function Review() {
   useEffect(() => {
     async function fetchReviews() {
       try {
-        const response = await reviewService.get("/all"); // Fetch all reviews
+        const response = await urlInstanse.get("/review/all"); // Fetch all reviews
         updateReviews(response.data); // Update state with fetched reviews
       } catch (e) {
         console.error("Error fetching reviews:", e); // Handle any errors during fetch
