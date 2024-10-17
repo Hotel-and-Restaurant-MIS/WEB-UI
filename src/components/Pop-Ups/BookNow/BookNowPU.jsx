@@ -259,6 +259,7 @@ export function BookNowPU({ isOpen, handleClose }) {
                     type="date"
                     value={formData.fromDate}
                     onChange={handleDateChange}
+                    min={new Date().toISOString().split("T")[0]} // Set the minimum date to today
                     required
                   />
                 </div>
@@ -269,6 +270,7 @@ export function BookNowPU({ isOpen, handleClose }) {
                     type="date"
                     value={formData.toDate}
                     onChange={handleDateChange}
+                    min={formData.fromDate} // Set the minimum date to the fromDate value
                     required
                   />
                 </div>

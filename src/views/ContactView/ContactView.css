@@ -107,6 +107,11 @@
     padding-right: 5%;
   }
 
+  .contact-content-description h1 {
+    font-size: 1.6rem;
+
+  }
+
   .contact-content {
     padding-left: 5%;
     padding-right: 5%;
