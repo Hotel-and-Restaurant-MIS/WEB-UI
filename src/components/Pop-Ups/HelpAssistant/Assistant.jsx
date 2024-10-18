@@ -20,7 +20,7 @@ export function Assistant({ isOpen, handleClose }) {
     try {
       const API_KEY = process.env.REACT_APP_API_KEY; // Get the API key from environment variables
       const genAI = new GoogleGenerativeAI(API_KEY); // Initialize the Google Generative AI
-      const model = await genAI.getGenerativeModel({ model: "tunedModels/luxury-restaurant-abis6m9ywrxa" }); // Get the specific model
+      const model = await genAI.getGenerativeModel({ model: "tunedModels/luxurychatbot-5hggjbcsldhz" }); // Get the specific model
 
       const generationConfig = {
         temperature: 1,
