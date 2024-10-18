@@ -4,7 +4,6 @@ import "../../../Fonts/Fonts.css";
 import { urlInstanse } from '../../../constants.js';
 
 export function ReviewPopUp({ isOpen, handleClose }) {
-
   // State to manage form data
   const [formData, setFormData] = useState({
     name: '',
@@ -13,6 +12,9 @@ export function ReviewPopUp({ isOpen, handleClose }) {
 
   // State to manage success message
   const [isReviewSubmit, setReviewSubmit] = useState(false);
+  
+  // State to manage form submission state
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Update form data as user types
   const handleInputChange = (e) => {
@@ -26,7 +28,8 @@ export function ReviewPopUp({ isOpen, handleClose }) {
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData); // Log data for debugging
+    setIsSubmitting(true); // Set submitting state to true
+
     try {
       await urlInstanse.post("/review/temp/add", formData);
       setFormData({
@@ -40,6 +43,8 @@ export function ReviewPopUp({ isOpen, handleClose }) {
       }, 3000); // Hide message and close popup after 3 seconds
     } catch (e) {
       console.error(e);
+    } finally {
+      setIsSubmitting(false); // End submitting
     }
   };
 
@@ -81,7 +86,13 @@ export function ReviewPopUp({ isOpen, handleClose }) {
                 />
               </div>
               <div className='review-popup-button-container'>
-                <button type="submit" className='review-submit-button'>Add Review</button>
+                <button 
+                  type="submit" 
+                  className='review-submit-button' 
+                  disabled={isSubmitting} // Disable button while submitting
+                >
+                  {isSubmitting ? 'Submitting...' : 'Add Review'} 
+                </button>
               </div>
             </form>
           </>
