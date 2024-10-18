@@ -35,9 +35,28 @@
   border-top-left-radius: 0.625rem;
 }
 
+.verify-form{
+  border-radius: 0.625rem;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.verify-form input {
+  padding: 0.5rem 1rem;
+  border: 2px solid #000;
+  border-radius: 0.5rem;
+}
+
+.booknow-form{
+  border-radius: 0.625rem;
+  padding: 1rem 0;
+}
+
 .booknow-popup-container {
   color: black;
-  padding-bottom: 0.625rem;
 }
 
 .booknow-content-description {
@@ -171,12 +190,14 @@
 }
 
 .success-message {
-  margin-top: 0.625rem;
+  margin:0;
   background-color: #F7F7F7;
   color: black;
   font-weight: bold;
   text-align: center;
-  padding: 0.625rem;
+  padding:1rem 0;
+  border: 1px solid #000;
+  border-radius: 0.625rem;
 }
 
 .booknow-close-btn {
@@ -295,6 +316,12 @@
   .booknow-popup-container {
     width: 80%;
     box-shadow: 0 0.15em 0.3rem rgba(0, 0, 0, 0.2);
+  }
+  
+  .verify-form {
+    padding: 2rem 0;
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
   .form-group {
